@@ -3,60 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Konkou Redaksyon – Chanje Ayiti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>-📘 Konkou- </h1>
-  <p>Patisipasyon : <strong>150 GDS</strong></p>
-</header>
+<h1>📘 Konkou Redaksyon – Chanje Ayiti</h1>
 
-<section class="regles">
-  <h2>📌 Règ Konkou</h2>
-  <ul>
-    <li>Laj: 15–30 an</li>
-    <li>300–800 mo</li>
-    <li>Lang: Kreyòl / Fransè</li>
-    <li>Frè enskripsyon: 150 GDS</li>
-  </ul>
-</section>
+<p><strong>Frè:</strong> 150 GDS</p>
 
-<section class="form-section">
-  <h2>✍️ Enskri pou Konkou a</h2>
+<h3>📌 Règ</h3>
+<ul>
+  <li>Laj: 15 – 30 an</li>
+  <li>300 – 800 mo</li>
+  <li>Kreyòl ou Fransè</li>
+</ul>
 
-  <form id="inscriptionForm">
-    <input type="text" id="nom" placeholder="Non konplè" required>
-    <input type="number" id="age" min="15" max="30" placeholder="Laj" required>
-    <input type = "number" id="numéro" placeholder="Mete nimewo (whatsapp & Moncash ou Natcash)" required>
-    <input type="text" id="titre" placeholder="Tit redaksyon an" required>
+<h3>✍️ Enskripsyon</h3>
+<form id="concoursForm">
+  <input id="nom" placeholder="Non konplè" required>
+  <input id="age" type="number" min="15" max="30" required>
+  <input id="titre" placeholder="Tit redaksyon an" required>
+  <textarea id="texte" placeholder="Redaksyon (300–800 mo)" required></textarea>
+  <button type="submit">Soumèt</button>
+</form>
 
-    <textarea id="texte" placeholder="Redaksyon ou (300–800 mo)" required></textarea>
-<h3>💰 Paiement MonCash – 150 GDS</h3>
-
-<p>
-  📱 Peye sou MonCash:  
-  <strong>509 XXXX XXXX</strong><br>
-  📝 Mete kòd tranzaksyon an apre peman
-</p>
-
-<input id="mcNumber" placeholder="Nimewo MonCash ou" required>
-<input id="mcCode" placeholder="Kòd tranzaksyon MonCash" required>
-    <button type="submit">Peye 150 GDS & Enskri</button>
-  </form>
-
-  <p id="message"></p>
-</section>
-
-<section class="liste">
-  <h2>📄 Lis Patisipan Valide</h2>
-  <div id="participants"></div>
-</section>
-
-<footer>
-  <p>© 2026 – Konkou </p>
-</footer>
+<p id="msg"></p>
 
 <script type="module" src="app.js"></script>
 </body>
-  </html>
+    </html>
