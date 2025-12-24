@@ -23,50 +23,34 @@
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const form = document.getElementById("form");
-const msg = document.getElementById("msg");
-const liste = document.getElementById("liste");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("concoursForm");
+  const msg = document.getElementById("msg");
 
-form.addEventListener("submit", e => {
-  e.preventDefault();
+  if (!form) return;
 
-  const texteValue = texte.value.trim();
-  const mots = texteValue.split(/\s+/).length;
+  form.addEventListener("submit", e => {
+    e.preventDefault();
 
-  if (mots < 300 || mots > 800) {
-    msg.textContent = "❌ Redaksyon an dwe 300–800 mo.";
-    return;
-  }
+    const texte = document.getElementById("texte").value.trim();
+    const mots = texte.split(/\s+/).length;
 
-  push(ref(db, "concours/participants"), {
-    nom: nom.value,
-    age: age.value,
-    titre: titre.value,
-    texte: texteValue,
-    statut: "paiement_en_attente",
-    paiement: {
-      montant: 150,
-      numero: mcNumber.value,
-      transactionId: mcCode.value,
-      valide: false
-    },
-    date: Date.now()
-  });
-
-  msg.textContent = "✅ Peman an soumèt. Admin ap verifye MonCash.";
-  form.reset();
-});
-onValue(ref(db, "concours/participants"), snap => {
-  liste.innerHTML = "";
-  snap.forEach(s => {
-    const d = s.val();
-    if (d.statut === "valide") {
-      liste.innerHTML += `
-        <div class="card">
-          <h4>${d.titre}</h4>
-          <small>${d.nom}</small>
-        </div>
-      `;
+    if (mots < 300 || mots > 800) {
+      msg.textContent = "❌ 300–800 mo obligatwa";
+      return;
     }
+
+    push(ref(db, "concours/participants"), {
+      nom: document.getElementById("nom").value,
+      age: document.getElementById("age").value,
+      titre: document.getElementById("titre").value,
+      texte,
+      statut: "attente_validation",
+      date: Date.now()
+    });
+
+    msg.textContent = "✅ Soumèt avèk siksè";
+    form.reset();
   });
 });
+
