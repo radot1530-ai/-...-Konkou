@@ -21,54 +21,30 @@
   const analytics = getAnalytics(app);
 
 const db = getDatabase(app);
-const paiement = document.getElementById("paiement");
-const attente = document.getElementById("attente");
-const valide = document.getElementById("valide");
-const elimine = document.getElementById("elimine");
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const liste = document.getElementById("liste");
 
 onValue(ref(db, "concours/participants"), snap => {
-  attente.innerHTML = valide.innerHTML = elimine.innerHTML = "";
-
-  snap.forEach(s => {
-    const d = s.val();
-    const id = s.key;
-
-    const card = `
+  liste.innerHTML = "";
+  snap.forEach(item => {
+    const d = item.val();
+    liste.innerHTML += `
       <div class="card">
         <h4>${d.titre}</h4>
-        <small>${d.nom} (${d.age})</small><br>
-        <button class="blue" onclick="set('${id}','valide')">Valide</button>
-        <button class="red" onclick="set('${id}','elimine')">Élimine</button>
+        <p>${d.nom} (${d.age} an)</p>
+        <p>Statut: ${d.statut}</p>
+        <button onclick="valider('${item.key}')">Valider</button>
+        <button onclick="eliminer('${item.key}')">Éliminer</button>
       </div>
     `;
-
-    if (d.statut === "en_attente") attente.innerHTML += card;
-    if (d.statut === "valide") valide.innerHTML += card;
-    if (d.statut === "elimine") elimine.innerHTML += card;
-    if (d.statut === "paiement_en_attente") {
-  paiement.innerHTML += `
-    <div class="card">
-      <h4>${d.titre}</h4>
-      <p>${d.nom}</p>
-      <p>📱 ${d.paiement.numero}</p>
-      <p>🧾 ${d.paiement.transactionId}</p>
-
-      <button class="blue"
-        onclick="validerPaiement('${id}')">
-        Valider Peman
-      </button>
-    </div>
-  `;
-};
   });
 });
 
-window.set = (id, statut) => {
-  update(ref(db, "concours/participants/" + id), { statut });
-};
-window.validerPaiement = id => {
-  update(ref(db, "concours/participants/" + id), {
-    statut: "en_attente",
-    "paiement/valide": true
-  });
-};
+window.valider = id =>
+  update(ref(db, "concours/participants/" + id), { statut: "validé" });
+
+window.eliminer = id =>
+  update(ref(db, "concours/participants/" + id), { statut: "éliminé" });
+
