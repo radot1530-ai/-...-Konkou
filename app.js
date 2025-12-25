@@ -1,6 +1,7 @@
-// Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,45 +13,66 @@
     projectId: "kaylakay-cdf64",
     storageBucket: "kaylakay-cdf64.firebasestorage.app",
     messagingSenderId: "663099511740",
-    appId: "1:663099511740:web:5db3589db9bd323df791b9",
-    measurementId: "G-WLH8VJCEC8"
+    appId: "1:663099511740:web:aeb6bddccee9666ff791b9",
+    measurementId: "G-JF9PNTTTG4"
   };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("concoursForm");
-  const msg = document.getElementById("msg");
+const liste = document.getElementById("liste");
+const votedKey = "deja_vote_concours";
 
-  if (!form) return;
+// 🔹 AFFICHAGE REDAKSYON YO
+onValue(ref(db, "concours/participants"), snap => {
+  liste.innerHTML = "";
 
-  form.addEventListener("submit", e => {
-    e.preventDefault();
+  snap.forEach(item => {
+    const d = item.val();
 
-    const texte = document.getElementById("texte").value.trim();
-    const mots = texte.split(/\s+/).length;
+    // 🔸 Montre sèlman 200 premiers caractères
+    const extrait = d.texte.substring(0, 200) + "...";
 
-    if (mots < 300 || mots > 800) {
-      msg.textContent = "❌ 300–800 mo obligatwa";
-      return;
+    const dejaVote = localStorage.getItem(votedKey) === item.key;
+
+    const div = document.createElement("div");
+    div.className = "card";
+
+    div.innerHTML = `
+      <h4>${d.titre}</h4>
+      <p><strong>${d.nom}</strong></p>
+      <p>${extrait}</p>
+      <button class="${dejaVote ? "voted" : ""}">
+        ${dejaVote ? "✔️ Vote enregistré" : "👍 Voter"}
+      </button>
+    `;
+
+    const btn = div.querySelector("button");
+
+    if (!dejaVote) {
+      btn.onclick = () => voter(item.key, btn);
+    } else {
+      btn.disabled = true;
     }
 
-    push(ref(db, "concours/participants"), {
-      nom: document.getElementById("nom").value,
-      age: document.getElementById("age").value,
-      titre: document.getElementById("titre").value,
-      texte,
-      statut: "attente_validation",
-      date: Date.now()
-    });
-
-    msg.textContent = "✅ Soumèt avèk siksè";
-    form.reset();
+    liste.appendChild(div);
   });
 });
 
+// 🔹 FONCTION VOTE
+function voter(id, btn) {
+  if (localStorage.getItem(votedKey)) {
+    alert("❌ Ou deja vote sou telefòn sa");
+    return;
+  }
+
+  runTransaction(
+    ref(db, "concours/participants/" + id + "/votes"),
+    v => (v || 0) + 1
+  );
+
+  localStorage.setItem(votedKey, id);
+  btn.textContent = "✔️ Vote enregistré";
+  btn.classList.add("voted");
+  btn.disabled = true;
+    }
