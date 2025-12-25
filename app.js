@@ -10,6 +10,7 @@
   const firebaseConfig = {
     apiKey: "AIzaSyAgvH0CpF6tGISpfLw3JWJCT2beBG28wAM",
     authDomain: "kaylakay-cdf64.firebaseapp.com",
+    databaseURL:"https://kaylakay-cdf64-default-rtdb.firebaseio.com/",
     projectId: "kaylakay-cdf64",
     storageBucket: "kaylakay-cdf64.firebasestorage.app",
     messagingSenderId: "663099511740",
