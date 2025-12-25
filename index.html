@@ -2,168 +2,20 @@
 <html lang="ht">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Todo Kaylakay Firebase v12.7</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      max-width: 600px; margin: 50px auto; padding: 20px; 
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-    }
-    .container { 
-      background: white; border-radius: 20px; padding: 30px; 
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
-    }
-    h1 { 
-      text-align: center; color: #333; margin-bottom: 30px; 
-      font-size: 2.5em; background: linear-gradient(45deg, #4285f4, #34a853); 
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .input-group { 
-      display: flex; gap: 10px; margin-bottom: 20px; 
-    }
-    input { 
-      flex: 1; padding: 15px; border: 2px solid #eee; 
-      border-radius: 10px; font-size: 16px; 
-      transition: border-color 0.3s;
-    }
-    input:focus { outline: none; border-color: #4285f4; }
-    button { 
-      padding: 15px 25px; background: #4285f4; color: white; 
-      border: none; border-radius: 10px; cursor: pointer; 
-      font-size: 16px; font-weight: bold; transition: all 0.3s;
-    }
-    button:hover { background: #3367d6; transform: translateY(-2px); }
-    .stats { 
-      display: flex; justify-content: space-around; 
-      background: #f8f9fa; padding: 15px; border-radius: 10px; 
-      margin-bottom: 20px; font-weight: bold; color: #666;
-    }
-    ul { list-style: none; }
-    li { 
-      display: flex; align-items: center; gap: 15px; 
-      padding: 15px; background: #f8f9fa; 
-      margin-bottom: 10px; border-radius: 10px; 
-      transition: all 0.3s;
-    }
-    li:hover { background: #e9ecef; transform: translateX(5px); }
-    .todo-text { flex: 1; font-size: 18px; }
-    .delete-btn { 
-      background: #ea4335; padding: 8px 15px; 
-      border-radius: 8px; font-size: 14px;
-    }
-    .delete-btn:hover { background: #c5221f; }
-    .empty { text-align: center; color: #999; font-style: italic; padding: 40px; }
-  </style>
+  <title>Mini Site Vote Konkou</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>📝 Todo Kaylakay</h1>
-    
-    <div class="stats">
-      <div>Total: <span id="total">0</span></div>
-      <div>Achte: <span id="done">0</span></div>
-    </div>
-    
-    <div class="input-group">
-      <input type="text" id="todoInput" placeholder="Ekri tach ou... (Enter pou ajoute)">
-      <button onclick="addTodo()">➕ Ajoute</button>
-    </div>
-    
-    <ul id="todoList"></ul>
-    <div id="emptyState" class="empty">Pa gen okenn tach ankò... Ajoute youn!</div>
-  </div>
 
-  <script type="module">
-    // KÒD FİREBASE OU A
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-    import {
-      getDatabase, ref, push, set, remove, onValue
-    } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+<h2>🗳️ Vote pou Konkou a</h2>
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyAgvH0CpF6tGISpfLw3JWJCT2beBG28wAM",
-      authDomain: "kaylakay-cdf64.firebaseapp.com",
-      databaseURL: "https://kaylakay-cdf64-default-rtdb.firebaseio.com/",
-      projectId: "kaylakay-cdf64",
-      storageBucket: "kaylakay-cdf64.appspot.com",
-      messagingSenderId: "663099511740",
-      appId: "1:663099511740:web:aeb6bddccee9666ff791b9",
-      measurementId: "G-JF9PNTTTG4"
-    };
+<div id="liste">⏳ Chajman...</div>
 
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
+<!-- Firebase v12.7 CDN -->
+<script type="module" src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js"></script>
 
-    // ELEMAN DOM
-    const todoInput = document.getElementById('todoInput');
-    const todoList = document.getElementById('todoList');
-    const emptyState = document.getElementById('emptyState');
-    const totalSpan = document.getElementById('total');
-    const doneSpan = document.getElementById('done');
-
-    const todosRef = ref(db, 'kaylakay-todos');
-
-    // FONKSYON AJOUTE TODO
-    window.addTodo = () => {
-      const text = todoInput.value.trim();
-      if (text) {
-        const newTodoRef = push(todosRef);
-        set(newTodoRef, {
-          text: text,
-          done: false,
-          createdAt: Date.now()
-        });
-        todoInput.value = '';
-      }
-    };
-
-    // FONKSYON EFACE TODO
-    window.deleteTodo = (id) => {
-      if (confirm('Efase tach sa a?')) {
-        remove(ref(db, `kaylakay-todos/${id}`));
-      }
-    };
-
-    // LISTENER TAN REYÈL
-    onValue(todosRef, (snapshot) => {
-      const todos = snapshot.val();
-      todoList.innerHTML = '';
-      
-      if (todos) {
-        emptyState.style.display = 'none';
-        let total = 0, done = 0;
-        
-        Object.entries(todos).forEach(([id, todo]) => {
-          total++;
-          if (todo.done) done++;
-          
-          const li = document.createElement('li');
-          li.innerHTML = `
-            <span class="todo-text">${todo.text}</span>
-            <button class="delete-btn" onclick="deleteTodo('${id}')">🗑️ Efase</button>
-          `;
-          todoList.appendChild(li);
-        });
-        
-        totalSpan.textContent = total;
-        doneSpan.textContent = done;
-      } else {
-        emptyState.style.display = 'block';
-        totalSpan.textContent = '0';
-        doneSpan.textContent = '0';
-      }
-    });
-
-    // EVENMAN KLAZYE ENTER
-    todoInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') addTodo();
-    });
-
-    // FOKIS OTOMATIK
-    todoInput.focus();
-  </script>
+<!-- App JS -->
+<script type="module" src="app.js"></script>
 </body>
 </html>
