@@ -21,40 +21,52 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
-const liste = document.getElementById("liste");
-const participantsRef = ref(db, "concours/participants");
 
-onValue(participantsRef, (snapshot) => {
+/* 🔹 HTML */
+const liste = document.getElementById("liste");
+
+/* 🔹 PREVENT DOUBLE VOTE */
+const dejaVote = localStorage.getItem("vote_konkou");
+
+/* 🔹 DB REF */
+const concoursRef = ref(db, "concours");
+
+/* 🔹 LOAD DATA */
+onValue(concoursRef, (snapshot) => {
   liste.innerHTML = "";
 
   if (!snapshot.exists()) {
-    liste.innerHTML = "❌ Aucun participant trouvé";
+    liste.innerHTML = "❌ Pa gen okenn done pou vote.";
     return;
   }
 
-  const data = snapshot.val();
+  snapshot.forEach((child) => {
+    const id = child.key;
+    const d = child.val();
 
-  Object.keys(data).forEach(id => {
-    const p = data[id];
+    const card = document.createElement("div");
+    card.className = "card";
 
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <h3>${p.titre}</h3>
-      <p>${p.texte.substring(0, 80)}...</p>
-      <p>Votes : <span id="v-${id}">${p.votes}</span></p>
-      <button onclick="vote('${id}')">Voter</button>
-      <hr>
+    card.innerHTML = `
+      <h4>${d.nom || "Anonim"}</h4>
+      <p>${(d.texte || "").substring(0, 120)}...</p>
+      <button ${dejaVote ? "disabled" : ""}>
+        👍 Vote (${d.votes || 0})
+      </button>
     `;
-    liste.appendChild(div);
+
+    card.querySelector("button").onclick = () => {
+      if (dejaVote) return;
+
+      runTransaction(
+        ref(db, "concours/" + id + "/votes"),
+        (v) => (v || 0) + 1
+      );
+
+      localStorage.setItem("vote_konkou", "ok");
+      location.reload();
+    };
+
+    liste.appendChild(card);
   });
 });
-
-window.vote = function(id) {
-  const voteRef = ref(db, `concours/participants/${id}/votes`);
-
-  runTransaction(voteRef, (current) => {
-    return (current || 0) + 1;
-  });
-
-  alert("✅ Vote enregistré");
-};
