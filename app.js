@@ -20,59 +20,41 @@
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const liste = document.getElementById("liste");
-const votedKey = "deja_vote_concours";
 
-// 🔹 AFFICHAGE REDAKSYON YO
-onValue(ref(db, "concours/participants"), snap => {
+const liste = document.getElementById("liste");
+const participantsRef = ref(db, "concours/participants");
+
+onValue(participantsRef, (snapshot) => {
   liste.innerHTML = "";
 
-  snap.forEach(item => {
-    const d = item.val();
+  if (!snapshot.exists()) {
+    liste.innerHTML = "❌ Aucun participant trouvé";
+    return;
+  }
 
-    // 🔸 Montre sèlman 200 premiers caractères
-    const extrait = d.texte.substring(0, 200) + "...";
+  const data = snapshot.val();
 
-    const dejaVote = localStorage.getItem(votedKey) === item.key;
+  Object.keys(data).forEach(id => {
+    const p = data[id];
 
     const div = document.createElement("div");
-    div.className = "card";
-
     div.innerHTML = `
-      <h4>${d.titre}</h4>
-      <p><strong>${d.nom}</strong></p>
-      <p>${extrait}</p>
-      <button class="${dejaVote ? "voted" : ""}">
-        ${dejaVote ? "✔️ Vote enregistré" : "👍 Voter"}
-      </button>
+      <h3>${p.titre}</h3>
+      <p>${p.texte.substring(0, 80)}...</p>
+      <p>Votes : <span id="v-${id}">${p.votes}</span></p>
+      <button onclick="vote('${id}')">Voter</button>
+      <hr>
     `;
-
-    const btn = div.querySelector("button");
-
-    if (!dejaVote) {
-      btn.onclick = () => voter(item.key, btn);
-    } else {
-      btn.disabled = true;
-    }
-
     liste.appendChild(div);
   });
 });
 
-// 🔹 FONCTION VOTE
-function voter(id, btn) {
-  if (localStorage.getItem(votedKey)) {
-    alert("❌ Ou deja vote sou telefòn sa");
-    return;
-  }
+window.vote = function(id) {
+  const voteRef = ref(db, `concours/participants/${id}/votes`);
 
-  runTransaction(
-    ref(db, "concours/participants/" + id + "/votes"),
-    v => (v || 0) + 1
-  );
+  runTransaction(voteRef, (current) => {
+    return (current || 0) + 1;
+  });
 
-  localStorage.setItem(votedKey, id);
-  btn.textContent = "✔️ Vote enregistré";
-  btn.classList.add("voted");
-  btn.disabled = true;
-    }
+  alert("✅ Vote enregistré");
+};
