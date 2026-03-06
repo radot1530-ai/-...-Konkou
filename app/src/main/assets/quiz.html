@@ -334,7 +334,110 @@
 </div>
 
 </div>
-   <script src="questions.js"></script>
+   <script>
+/* ========= NS4 QUESTIONS INLINE ========= */
+window.NS4_QUESTIONS = {
+  mathematics: {
+    levels: {
+      niveau1: {
+        questions: [
+          {q:"Ki rezilta 2+2?", a:["3","4","5"], correct:1, type:"radio", explanation:"2+2 se 4."},
+          {q:"Ki fòmil kare yon nonb?", a:["n²","2n","n/2"], correct:0, type:"radio", explanation:"Kare n se n²."}
+        ],
+        exam: [
+          {q:"5+7=?", a:["12","11","13"], correct:0, type:"radio"},
+          {q:"8-3=?", a:["5","6","4"], correct:0, type:"radio"}
+        ]
+      },
+      niveau2: {
+        questions: [
+          {q:"Ki valè x si 2x=10?", a:["5","10","8"], correct:0, type:"radio"},
+        ],
+        exam: [
+          {q:"3x+2=11, x=?", a:["3","4","5"], correct:1, type:"radio"}
+        ]
+      },
+      niveau3:{questions:[], exam:[]},
+      niveau4:{questions:[], exam:[]},
+      niveau5:{questions:[], exam:[]},
+      niveau6:{questions:[], exam:[]},
+      niveau7:{questions:[], exam:[]},
+      niveau8:{questions:[], exam:[]},
+      niveau9:{questions:[], exam:[]},
+      niveau10:{questions:[], exam:[]}
+    },
+    final_exam:[
+      {q:"Rezilta 6x6?", a:["36","30","42"], correct:0, type:"radio"},
+      {q:"Kisa 9-4?", a:["5","4","6"], correct:0, type:"radio"}
+    ]
+  },
+
+  statistik: {
+    levels: {
+      niveau1:{questions:[{q:"Ki definisyon estatistik?", a:["Kalkil done","Kou dans","Matematik"], correct:0, type:"radio"}], exam:[]},
+      niveau2:{questions:[], exam:[]},
+      niveau3:{questions:[], exam:[]},
+      niveau4:{questions:[], exam:[]},
+      niveau5:{questions:[], exam:[]},
+      niveau6:{questions:[], exam:[]},
+      niveau7:{questions:[], exam:[]},
+      niveau8:{questions:[], exam:[]},
+      niveau9:{questions:[], exam:[]},
+      niveau10:{questions:[], exam:[]}
+    },
+    final_exam:[]
+  },
+
+  // Ou ka ajoute tout lòt matyè menm jan
+  pwobab: {levels:{niveau1:{questions:[],exam:[]},niveau2:{questions:[],exam:[]},niveau3:{questions:[],exam:[]},niveau4:{questions:[],exam:[]},niveau5:{questions:[],exam:[]},niveau6:{questions:[],exam:[]},niveau7:{questions:[],exam:[]},niveau8:{questions:[],exam:[]},niveau9:{questions:[],exam:[]},niveau10:{questions:[],exam:[]}}, final_exam:[]},
+  Suit: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  konplèks: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  philosophie: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  entwofilozofi: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  filozofilojik: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  filozofimoral: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  Art: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  physiquecondensateur:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  physiquemagnétique:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  physiquealternarif:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  physiquecinémarique:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  creole:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  anglais:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  espagnol:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  chimie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  biologie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  histoire:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  géographie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
+  economie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]}
+};
+
+/* ========= CALCUL SUBJECT PROGRESS ========= */
+function getSubjectPercent(subject){
+  const progress = JSON.parse(localStorage.getItem("ns4_progress")||"{}");
+  const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6","niveau7","niveau8","niveau9","niveau10"];
+  let passed = 0;
+  levels.forEach(l=>{
+    if(progress[subject] && progress[subject][l] && progress[subject][l].examPassed){
+      passed++;
+    }
+  });
+  return Math.round((passed/levels.length)*100);
+}
+
+/* ========= INIT BUTTONS ========= */
+document.querySelectorAll(".subjectBtn").forEach(btn=>{
+  const subject = btn.dataset.subject;
+  const percent = getSubjectPercent(subject);
+  const percentBox = btn.querySelector(".subjectPercent");
+  if(percentBox){
+    percentBox.innerText = percent+"%";
+    if(percent < 40) percentBox.style.background="#e74c3c";
+    else if(percent < 80) percentBox.style.background="#f39c12";
+    else percentBox.style.background="#2ecc71";
+  }
+  btn.addEventListener("click",()=> startQuiz(subject, window.NS4_QUESTIONS));
+});
+</script>
 <script src="quiz.js"></script>
 
 <script>
