@@ -22,7 +22,7 @@ function vibrate(pattern){
 
 /* =================================== */    
 
-export function startQuiz(subject, allQuestions){    
+function startQuiz(subject, allQuestions){    
 
 const subjectData = allQuestions[subject];    
 if(!subjectData) return;    
