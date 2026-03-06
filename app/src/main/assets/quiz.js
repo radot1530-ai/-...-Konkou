@@ -22,15 +22,14 @@ function vibrate(pattern){
 
 /* =================================== */    
 
-function startQuiz(subject, allQuestions){    
+function startQuiz(subject, NS4_QUESTIONS) {
+    const subjectData = NS4_QUESTIONS[subject];  // ← korije isit la
+    if(!subjectData) return;
 
-const subjectData = allQuestions[subject];    
-if(!subjectData) return;    
+    document.getElementById("subjects").style.display="none";    
+    document.getElementById("quizArea").style.display="block";
 
-document.getElementById("subjects").style.display="none";    
-document.getElementById("quizArea").style.display="block";    
-
-const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6", "niveau7", "niveau8","niveau9","niveau10"];    
+    const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6", "niveau7", "niveau8","niveau9","niveau10"];
 
 let currentLevel = null;    
 let mode = null; // lesson | exam | final    
