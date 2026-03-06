@@ -141,6 +141,19 @@
    <div class="subjectPercent">75%</div></button>
    
    
+   
+      <button class="subjectBtn" data-subject="Art"> <div class="subjectLeft">
+   <div class="subjectLogo">
+     🎨  <!-- oswa -->
+     <!-- <img src="logos/math.png"> -->
+   </div>
+   <div class="subjectName">
+     Art ak Mizik
+   </div>
+ </div>
+  <div class="subjectRight">
+   <div class="subjectPercent">75%</div></button>
+
 
 <button class="subjectBtn" data-subject="physiquecondensateur"> <div class="subjectLeft">
    <div class="subjectLogo">
@@ -321,58 +334,68 @@
 </div>
 
 </div>
+<script type="module">  
+import { startQuiz } from './quiz.js';  
+  
+/* ========= CALCUL SUBJECT PROGRESS ========= */  
+function getSubjectPercent(subject){  
+  const progress = JSON.parse(localStorage.getItem("ns4_progress")||"{}");  
+  const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6","niveau7","niveau8","niveau9","niveau10"];  
+  
+  let passed = 0;  
+  
+  levels.forEach(l=>{  
+    if(progress[subject]?.[l]?.examPassed){  
+      passed++;  
+    }  
+  });  
+  
+  return Math.round((passed/levels.length)*100);  
+}  
+  
+/* ========= LOAD QUESTIONS ========= */  
 
-<script type="module">
-import { startQuiz } from './quiz.js';
+var xhr = new XMLHttpRequest();  
+xhr.overrideMimeType("application/json");  
+xhr.open("GET","data/questions.json",true);  
 
-/* ========= CALCUL SUBJECT PROGRESS ========= */
-function getSubjectPercent(subject){
-  const progress = JSON.parse(localStorage.getItem("ns4_progress")||"{}");
-  const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6", "niveau7", "niveau8","niveau9","niveau10"];
+xhr.onreadystatechange = function () {  
 
-  let passed = 0;
+  if(xhr.readyState === 4 && xhr.status === 200){  
 
-  levels.forEach(l=>{
-    if(progress[subject]?.[l]?.examPassed){
-      passed++;
-    }
-  });
+    const data = JSON.parse(xhr.responseText);  
+    window.NS4_QUESTIONS = data;  
+  
+    document.querySelectorAll(".subjectBtn").forEach(btn=>{  
+      const subject = btn.dataset.subject;  
+  
+      /* ====== SET PERCENT ====== */  
+      const percent = getSubjectPercent(subject);  
+      const percentBox = btn.querySelector(".subjectPercent");  
+  
+      if(percentBox){  
+        percentBox.innerText = percent + "%";  
+  
+        // color UX  
+        if(percent < 40) percentBox.style.background="#e74c3c";  
+        else if(percent < 80) percentBox.style.background="#f39c12";  
+        else percentBox.style.background="#2ecc71";  
+      }  
+  
+      /* ===== CLICK EVENT ===== */  
+      btn.addEventListener("click",()=>{  
+        startQuiz(subject, window.NS4_QUESTIONS);  
+      });  
+  
+    });  
 
-  return Math.round((passed/levels.length)*100);
-}
+  }  
 
-/* ========= LOAD QUESTIONS ========= */
-fetch("data/questions.json")
-.then(r=>r.json())
-.then(data=>{
-  window.NS4_QUESTIONS = data;
+};  
 
-  document.querySelectorAll(".subjectBtn").forEach(btn=>{
-    const subject = btn.dataset.subject;
+xhr.send(null);  
 
-    /* ====== SET PERCENT ====== */
-    const percent = getSubjectPercent(subject);
-    const percentBox = btn.querySelector(".subjectPercent");
-
-    if(percentBox){
-      percentBox.innerText = percent + "%";
-
-      // color UX
-      if(percent < 40) percentBox.style.background="#e74c3c";
-      else if(percent < 80) percentBox.style.background="#f39c12";
-      else percentBox.style.background="#2ecc71";
-    }
-
-    /* ===== CLICK EVENT ===== */
-    btn.addEventListener("click",()=>{
-      startQuiz(subject, window.NS4_QUESTIONS);
-    });
-
-  });
-})
-.catch(err=>console.error("JSON error:",err));
 </script>
 
 </body>
 </html>
-
