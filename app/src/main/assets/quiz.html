@@ -1,458 +1,439 @@
-<!DOCTYPE html>
-<html lang="ht">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NS4 App - Quiz</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<!DOCTYPE html>    <html lang="ht">    
+<head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>NS4 App - Quiz</title>    
+<link rel="stylesheet" href="style.css">    
+</head>    <body>    <div class="container">    
+<!-- SUBJECTS -->    <div id="subjects">    
+<h1><i>Chwazi matyè</i></h1>    
+<button class="subjectBtn" data-subject="mathematics"> <div class="subjectLeft">    
+   <div class="subjectLogo">    
+     📉   <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Matematik: Analiz    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">    
+     75%    
+   </div>    
+    </button>    <button class="subjectBtn" data-subject="statistik"> <div class="subjectLeft">
 
-<body>
+   <div class="subjectLogo">    
+     📊    
+        <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Matematik: Statistik    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">    
+     75%    
+   </div>    
+    </button>    <button class="subjectBtn" data-subject="pwobab"> <div class="subjectLeft">
 
-<div class="container">
-<!-- SUBJECTS -->
+   <div class="subjectLogo">    
+     P(x)  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Matematik: Pwobab    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">    
+     75%    
+   </div>    
+    </button>    <button class="subjectBtn" data-subject="Suit"> <div class="subjectLeft">
 
-<div id="subjects">
-<h1><i>Chwazi matyè</i></h1>
-<button class="subjectBtn" data-subject="mathematics"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     📉   <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Matematik: Analiz
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">
-     75%
-   </div>
-    </button>
-     
-     <button class="subjectBtn" data-subject="statistik"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     📊
-        <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Matematik: Statistik
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">
-     75%
-   </div>
-    </button>
-    
-    <button class="subjectBtn" data-subject="pwobab"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     P(x)  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Matematik: Pwobab
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">
-     75%
-   </div>
-    </button>
-    
-    <button class="subjectBtn" data-subject="Suit"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     📟<!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Matematik: Suit
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">
-     75%
-   </div>
-    </button>
-    
-    <button class="subjectBtn" data-subject="konplèks"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     im()  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Matematik: Konplèks
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">
-     75%
-   </div>
-    </button>
-     
+   <div class="subjectLogo">    
+     📟<!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Matematik: Suit    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">    
+     75%    
+   </div>    
+    </button>    <button class="subjectBtn" data-subject="konplèks"> <div class="subjectLeft">
 
-     
-<button class="subjectBtn" data-subject="philosophie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🤔  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Filozofi : istwa filozofi</div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div></button>
-   
-   <button class="subjectBtn" data-subject="entwofilozofi"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🤔  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Filozofi : Entwodiksyon nan filozofi
-   </div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div></button>
-   
-   <button class="subjectBtn" data-subject="filozofilojik"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🤔  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Filozofi : Lojik
-   </div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div></button>
-   
-   
-   <button class="subjectBtn" data-subject="filozofimoral"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🤔  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Filozofi : Moral
-   </div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div></button>
-   
-   
-   
-      <button class="subjectBtn" data-subject="Art"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🎨  <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Art ak Mizik
-   </div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div></button>
+   <div class="subjectLogo">    
+     im()  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Matematik: Konplèks    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">    
+     75%    
+   </div>    
+    </button>    <button class="subjectBtn" data-subject="philosophie"> <div class="subjectLeft">
 
+   <div class="subjectLogo">    
+     🤔  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Filozofi : istwa filozofi</div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div></button>    <button class="subjectBtn" data-subject="entwofilozofi"> <div class="subjectLeft">
 
-<button class="subjectBtn" data-subject="physiquecondensateur"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     ⚛️ <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Fizik : Kondansatè
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-   <button class="subjectBtn" data-subject="physiquemagnétique"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🧲<!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Fizik : Manyetik
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-   <button class="subjectBtn" data-subject="physiquealternarif"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     〽️<!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Fizik : Altènatif
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-   <button class="subjectBtn" data-subject="physiquecinémarique"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🎡<!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Fizik : Sinematik
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-<button class="subjectBtn" data-subject="creole"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🇭🇹 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-    Kreyòl
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-  </button>
-  
-  <button class="subjectBtn" data-subject="anglais">
- <div class="subjectLeft">
-   <div class="subjectLogo">
-     🏴󠁧󠁢󠁥󠁮󠁧󠁿   <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Anglè
-   </div>
- </div>
-  <div class="subjectRight">
-   <div class="subjectPercent">75%</div> </button>
-     
-<button class="subjectBtn" data-subject="espagnol"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🇪🇸 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Espanyòl
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-<button class="subjectBtn" data-subject="chimie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🧪 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Chimi
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-<button class="subjectBtn" data-subject="biologie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🧬 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Byoloji
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-   <button class="subjectBtn" data-subject="biologie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🗺️ <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Jewoloji 
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-<button class="subjectBtn" data-subject="histoire"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🌎 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Istwa : Nasyonal
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
-   
-<button class="subjectBtn" data-subject="géographie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     🌐🗺️ <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Istwa : Inivèsèl
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
+   <div class="subjectLogo">    
+     🤔  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Filozofi : Entwodiksyon nan filozofi    
+   </div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div></button>    <button class="subjectBtn" data-subject="filozofilojik"> <div class="subjectLeft">
 
-<button class="subjectBtn" data-subject="géographie"> <div class="subjectLeft">
-   <div class="subjectLogo">
-     💰 <!-- oswa -->
-     <!-- <img src="logos/math.png"> -->
-   </div>
-   <div class="subjectName">
-     Ekonomi
-   </div>
- </div>
- <div class="subjectRight">
-   <div class="subjectPercent">75%</div>
-   </button>
+   <div class="subjectLogo">    
+     🤔  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Filozofi : Lojik    
+   </div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div></button>    <button class="subjectBtn" data-subject="filozofimoral"> <div class="subjectLeft">
 
+   <div class="subjectLogo">    
+     🤔  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Filozofi : Moral    
+   </div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div></button>    <button class="subjectBtn" data-subject="Art"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🎨  <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Art ak Mizik    
+   </div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div></button>    <button class="subjectBtn" data-subject="physiquecondensateur"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     ⚛️ <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Fizik : Kondansatè    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="physiquemagnétique"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🧲<!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Fizik : Manyetik    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="physiquealternarif"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     〽️<!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Fizik : Altènatif    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="physiquecinémarique"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🎡<!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Fizik : Sinematik    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="creole"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🇭🇹 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+    Kreyòl    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+  </button>      <button class="subjectBtn" data-subject="anglais">    
+ <div class="subjectLeft">    
+   <div class="subjectLogo">    
+     🏴   <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Anglè    
+   </div>    
+ </div>    
+  <div class="subjectRight">    
+   <div class="subjectPercent">75%</div> </button>    <button class="subjectBtn" data-subject="espagnol"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🇪🇸 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Espanyòl    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="chimie"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🧪 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Chimi    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="biologie"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🧬 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Byoloji    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="biologie"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🗺️ <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Jewoloji     
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="histoire"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🌎 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Istwa : Nasyonal    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="géographie"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     🌐🗺️ <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Istwa : Inivèsèl    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    <button class="subjectBtn" data-subject="géographie"> <div class="subjectLeft">
+
+   <div class="subjectLogo">    
+     💰 <!-- oswa -->    
+     <!-- <img src="logos/math.png"> -->    
+   </div>    
+   <div class="subjectName">    
+     Ekonomi    
+   </div>    
+ </div>    
+ <div class="subjectRight">    
+   <div class="subjectPercent">75%</div>    
+   </button>    </div>    <!-- QUIZ AREA -->    <div id="quizArea" style="display:none;">    
+<h2 id="quizTitle"></h2>    
+<h4 id="question"></h4>    
+<div id="answers" class="answers"></div>    
+</div>   
 </div>
-
-<!-- QUIZ AREA -->
-<div id="quizArea" style="display:none;">
-<h2 id="quizTitle"></h2>
-<h4 id="question"></h4>
-<div id="answers" class="answers"></div>
-</div>
-
-</div>
-   <script>
-/* ========= NS4 QUESTIONS INLINE ========= */
-window.NS4_QUESTIONS = {
-  mathematics: {
-    levels: {
-      niveau1: {
-        questions: [
-          {q:"Ki rezilta 2+2?", a:["3","4","5"], correct:1, type:"radio", explanation:"2+2 se 4."},
-          {q:"Ki fòmil kare yon nonb?", a:["n²","2n","n/2"], correct:0, type:"radio", explanation:"Kare n se n²."}
-        ],
-        exam: [
-          {q:"5+7=?", a:["12","11","13"], correct:0, type:"radio"},
-          {q:"8-3=?", a:["5","6","4"], correct:0, type:"radio"}
-        ]
-      },
-      niveau2: {
-        questions: [
-          {q:"Ki valè x si 2x=10?", a:["5","10","8"], correct:0, type:"radio"},
-        ],
-        exam: [
-          {q:"3x+2=11, x=?", a:["3","4","5"], correct:1, type:"radio"}
-        ]
-      },
-      niveau3:{questions:[], exam:[]},
-      niveau4:{questions:[], exam:[]},
-      niveau5:{questions:[], exam:[]},
-      niveau6:{questions:[], exam:[]},
-      niveau7:{questions:[], exam:[]},
-      niveau8:{questions:[], exam:[]},
-      niveau9:{questions:[], exam:[]},
-      niveau10:{questions:[], exam:[]}
-    },
-    final_exam:[
-      {q:"Rezilta 6x6?", a:["36","30","42"], correct:0, type:"radio"},
-      {q:"Kisa 9-4?", a:["5","4","6"], correct:0, type:"radio"}
-    ]
-  },
-
-  statistik: {
-    levels: {
-      niveau1:{questions:[{q:"Ki definisyon estatistik?", a:["Kalkil done","Kou dans","Matematik"], correct:0, type:"radio"}], exam:[]},
-      niveau2:{questions:[], exam:[]},
-      niveau3:{questions:[], exam:[]},
-      niveau4:{questions:[], exam:[]},
-      niveau5:{questions:[], exam:[]},
-      niveau6:{questions:[], exam:[]},
-      niveau7:{questions:[], exam:[]},
-      niveau8:{questions:[], exam:[]},
-      niveau9:{questions:[], exam:[]},
-      niveau10:{questions:[], exam:[]}
-    },
-    final_exam:[]
-  },
-
-  // Ou ka ajoute tout lòt matyè menm jan
-  pwobab: {levels:{niveau1:{questions:[],exam:[]},niveau2:{questions:[],exam:[]},niveau3:{questions:[],exam:[]},niveau4:{questions:[],exam:[]},niveau5:{questions:[],exam:[]},niveau6:{questions:[],exam:[]},niveau7:{questions:[],exam:[]},niveau8:{questions:[],exam:[]},niveau9:{questions:[],exam:[]},niveau10:{questions:[],exam:[]}}, final_exam:[]},
-  Suit: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  konplèks: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  philosophie: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  entwofilozofi: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  filozofilojik: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  filozofimoral: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  Art: {levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  physiquecondensateur:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  physiquemagnétique:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  physiquealternarif:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  physiquecinémarique:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  creole:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  anglais:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  espagnol:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  chimie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  biologie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  histoire:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  géographie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]},
-  economie:{levels:{niveau1:{questions:[],exam:[]}}, final_exam:[]}
-};
-
-/* ========= CALCUL SUBJECT PROGRESS ========= */
-function getSubjectPercent(subject){
-  const progress = JSON.parse(localStorage.getItem("ns4_progress")||"{}");
-  const levels = ["niveau1","niveau2","niveau3","niveau4","niveau5","niveau6","niveau7","niveau8","niveau9","niveau10"];
-  let passed = 0;
-  levels.forEach(l=>{
-    if(progress[subject] && progress[subject][l] && progress[subject][l].examPassed){
-      passed++;
-    }
-  });
-  return Math.round((passed/levels.length)*100);
-}
-
-/* ========= INIT BUTTONS ========= */
-document.querySelectorAll(".subjectBtn").forEach(btn=>{
-  const subject = btn.dataset.subject;
-  const percent = getSubjectPercent(subject);
-  const percentBox = btn.querySelector(".subjectPercent");
-  if(percentBox){
-    percentBox.innerText = percent+"%";
-    if(percent < 40) percentBox.style.background="#e74c3c";
-    else if(percent < 80) percentBox.style.background="#f39c12";
-    else percentBox.style.background="#2ecc71";
-  }
-  btn.addEventListener("click",()=> startQuiz(subject, window.NS4_QUESTIONS));
-});
-</script>
 <script src="quiz.js"></script>
+
 
 <script>
 
+/* ========= NS4 QUESTIONS INLINE ========= */
+window.NS4_QUESTIONS = {
+   mathematics: {
+    levels: {
+        niveau1:{
+        questions: [
+          {
+          q: "Ki derive de f(x) = x²?",
+            a: ["2x","x","x²","2"],
+            correct: 0,
+            type: "radio",
+            explanation: "Derive de x² se 2x."
+          },
+          {
+            q: "Ki entègral de ∫2x dx?",
+            a: ["x² + C","2x + C","x + C","x²/2 + C"],
+            correct: 0,
+            type:  "radio",
+            explanation: "Entègral de 2x dx se x² + C."
+          }
+        ],
+        exam: [
+          {
+            "q": "Ki valè f'(x) si f(x)=3x³?",
+            "a": ["9x²","3x²","x³","6x²"],
+            "correct": 0,
+            "type": "radio"
+          }]
+        }
+      }
+   },
+
+
+      statistik: {
+        levels: {
+        niveau1:{
+        questions: [
+          {
+            "q": "Ki mwayèn seri 2, 4, 6, 8?",
+            "a": ["4","5","6","7"],
+            "correct": 2,
+            "type": "radio",
+            "explanation": "Mwayèn = (2+4+6+8)/4 = 5."
+          }
+        ],
+      exam: [
+          {
+            "q": "Ki medyàn seri 3, 1, 4, 2, 5?",
+            "a": ["2","3","4","5"],
+            "correct": 1,
+            "type": "radio"
+          }
+        ]
+       }
+    }
+ },
+      pwobab: {
+        "levels": {
+          "niveau1": {
+        "questions": [
+          {
+            "q": "Si ou jete yon de, ki pwobabilite pou sòti 4?",
+            "a": ["1/6","1/2","1/4","1/3"],
+            "correct": 0,
+            "type": "radio",
+            "explanation": "Gen 6 fas, chak gen menm chans: 1/6."
+          }
+        ],
+        "exam": [
+          {
+            "q": "Si ou jete yon pyès lajan de fwa, ki pwobabilite pou sòti 2 tèt?",
+            "a": ["1/2","1/3","1/4","1/6"],
+            "correct": 2,
+            "type": "radio"
+          }
+        ]
+          }
+        }
+      },
+      philosophie: {
+        "levels": {
+          "niveau1": {
+            "questions": [
+              {
+                "q": "Ki sa filozofi ye?",
+                "a": ["Etid relijyon","Etid lanati","Amou pou sajès","Etid matematik"],
+                "correct": 2,
+                "type": "radio",
+                "explanation": "Filozofi se 'amou pou sajès'."
+              }
+            ],
+            "exam": [
+              {
+                "q": "Ki filozòf ki di 'Mwen panse, donk mwen egziste'?",
+                "a": ["Platon","Descartes","Aristòt","Sòkrèt"],
+                "correct": 1,
+                "type": "radio"
+              }
+            ]
+          }
+        }
+      },
+      physiquecondensateur: {
+        "levels":{
+          "niveau1":{
+        "questions": [
+          {
+            "q": "Ki fòmil pou kapasite kondansatè?",
+            "a": ["C=Q/V","V=IR","F=ma","E=mc²"],
+            "correct": 0,
+            "type": "radio",
+            "explanation": "C = Q/V, kote Q se chaj, V se vòltaj."
+          }
+        ],
+        "exam": [
+          {
+            "q": "Si C=2F, V=5V, ki valè Q?",
+            "a": ["10C","7C","5C","2C"],
+            "correct": 0,
+            "type": "radio"
+          }
+        ]
+      }
+    }
+    }
+};
 /* ========= CALCUL SUBJECT PROGRESS ========= */
 function getSubjectPercent(subject){
 
   const progress = JSON.parse(localStorage.getItem("ns4_progress")||"{}");
 
-  const levels = [
+  const levels=[
   "niveau1","niveau2","niveau3","niveau4","niveau5",
   "niveau6","niveau7","niveau8","niveau9","niveau10"
   ];
 
-  let passed = 0;
+  let passed=0;
 
   levels.forEach(l=>{
     if(progress[subject] && progress[subject][l] && progress[subject][l].examPassed){
@@ -463,50 +444,32 @@ function getSubjectPercent(subject){
   return Math.round((passed/levels.length)*100);
 }
 
+/* ========= INIT BUTTONS ========= */
 
-/* ========= LOAD QUESTIONS ========= */
+document.querySelectorAll(".subjectBtn").forEach(btn=>{
 
-var xhr = new XMLHttpRequest();
-xhr.overrideMimeType("application/json");
-xhr.open("GET","data/questions.json",true);
+  const subject = btn.dataset.subject;
 
-xhr.onreadystatechange = function(){
+  const percent = getSubjectPercent(subject);
 
-if(xhr.readyState == 4 && xhr.status == 200){
+  const percentBox = btn.querySelector(".subjectPercent");
 
-  const data = JSON.parse(xhr.responseText);
-  window.NS4_QUESTIONS = data;
+  if(percentBox){
 
-  document.querySelectorAll(".subjectBtn").forEach(btn=>{
+    percentBox.innerText = percent+"%";
 
-    const subject = btn.dataset.subject;
+    if(percent < 40) percentBox.style.background="#e74c3c";
+    else if(percent < 80) percentBox.style.background="#f39c12";
+    else percentBox.style.background="#2ecc71";
 
-    const percent = getSubjectPercent(subject);
-    const percentBox = btn.querySelector(".subjectPercent");
+  }
 
-    if(percentBox){
-
-      percentBox.innerText = percent + "%";
-
-      if(percent < 40) percentBox.style.background="#e74c3c";
-      else if(percent < 80) percentBox.style.background="#f39c12";
-      else percentBox.style.background="#2ecc71";
-    }
-
-    btn.addEventListener("click",function(){
-      startQuiz(subject, window.NS4_QUESTIONS);
-    });
-
+  btn.addEventListener("click",function(){
+    startQuiz(subject,window.NS4_QUESTIONS);
   });
 
-}
-
-};
-
-xhr.send(null);
+});
 
 </script>
-
-</body>
+</body>    
 </html>
-
