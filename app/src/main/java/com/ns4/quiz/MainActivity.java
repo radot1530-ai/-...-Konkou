@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        WebView webView = new WebView(this);
+        webView = new WebView(this);
         setContentView(webView);
 
         WebSettings webSettings = webView.getSettings();
@@ -20,20 +22,38 @@ public class MainActivity extends AppCompatActivity {
         // Enable JavaScript
         webSettings.setJavaScriptEnabled(true);
 
-        // Enable LocalStorage (important for your quiz progress)
+        // Enable LocalStorage
         webSettings.setDomStorageEnabled(true);
 
-        // Enable database storage (for older Android)
+        // Enable database storage
         webSettings.setDatabaseEnabled(true);
 
         // Allow file access
         webSettings.setAllowFileAccess(true);
         webSettings.setAllowContentAccess(true);
 
-        // Prevent opening browser outside the app
+        // Allow JS from file URLs (important for Firebase)
+        webSettings.setAllowFileAccessFromFileURLs(true);
+        webSettings.setAllowUniversalAccessFromFileURLs(true);
+
+        // Improve loading
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+
+        // Keep navigation inside the app
         webView.setWebViewClient(new WebViewClient());
 
-        // Load your page
+        // Load HTML
         webView.loadUrl("file:///android_asset/intro.html");
+    }
+
+    // Back button support
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
