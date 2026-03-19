@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceError;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,35 +23,52 @@ public class MainActivity extends AppCompatActivity {
 
         WebSettings webSettings = webView.getSettings();
 
-        // Enable JavaScript
+        // 🔹 Basic settings
         webSettings.setJavaScriptEnabled(true);
-
-        // Enable LocalStorage
         webSettings.setDomStorageEnabled(true);
-
-        // Enable database storage
         webSettings.setDatabaseEnabled(true);
 
-        // Allow file access
-        webSettings.setAllowFileAccess(true);
-        webSettings.setAllowContentAccess(true);
+        // 🔒 SECURITY SETTINGS
+        webSettings.setAllowFileAccess(false); // bloke aksè dirèk nan fichye
+        webSettings.setAllowContentAccess(false);
 
-        // Allow JS from file URLs (important for Firebase)
-        webSettings.setAllowFileAccessFromFileURLs(true);
-        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.setAllowFileAccessFromFileURLs(false);
+        webSettings.setAllowUniversalAccessFromFileURLs(false);
 
-        // Improve loading
+        // 🔹 UI
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
 
-        // Keep navigation inside the app
-        webView.setWebViewClient(new WebViewClient());
+        // 🔹 Secure WebView
+        webView.setWebViewClient(new SecureWebViewClient());
 
-        // Load HTML
+        // 🔹 Load page
         webView.loadUrl("file:///android_asset/intro.html");
     }
 
-    // Back button support
+    // 🔐 Custom WebViewClient pou sekirite
+    private class SecureWebViewClient extends WebViewClient {
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+            String url = request.getUrl().toString();
+
+            // 🔒 Bloke nenpòt URL ekstèn
+            if (!url.startsWith("file:///android_asset/")) {
+                Toast.makeText(MainActivity.this, "Aksè entèdi ❌", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+
+            return false;
+        }
+
+        @Override
+        public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+            Toast.makeText(MainActivity.this, "Erè chajman ❌", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // 🔙 Back button
     @Override
     public void onBackPressed() {
         if (webView.canGoBack()) {
@@ -56,4 +77,4 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-}
+                                                }
