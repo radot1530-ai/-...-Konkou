@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ht">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Login</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    
+    <h1>Konekte</h1>
+    
+    <form id="loginForm">
+      
+      <input type="text" id="pseudo" placeholder="Pseudo" required>
+      
+      <input type="email" id="contact" placeholder="Email" required>
+      
+      <input type="password" id="password" placeholder="Modpas" required autocomplete="off">
+      
+      <button type="submit" id="loginBtn">Konekte</button>
+      
+    </form>
+    
+    <p id="status"></p>
+    
+    <p>Ou poko gen kont ?</p>
+    
+    <button onclick="goSignup()">Enskri</button>
+    
+  </div>
+  
+  <script>
+    function goSignup() {
+      location = "signup.html";
+    }
+  </script>
+  
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-database-compat.js"></script>
+  <script src="log.js"></script>
+  
+</body>
+
+</html>
