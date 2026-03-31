@@ -1,0 +1,27 @@
+/* Popup guide & update */
+#guidePopup, #updatePopup {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+.guide-content, .update-content {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    width:85%;
+    max-width:320px;
+    text-align:center;
+}
+.guide-content h2, .update-content h2 { color:#007bff; margin-bottom:10px; }
+.guide-content p, .update-content p { margin-bottom:20px; color:#333; font-size:14px; }
+.guide-content button, .update-content button {
+    padding:10px 20px; margin:5px; border:none; border-radius:8px; cursor:pointer;
+}
+#nextBtn { background:#007bff; color:white; }
+#updateBtn { background:#28a745; color:white; }
+#laterBtn { background:#6c757d; color:white; }
