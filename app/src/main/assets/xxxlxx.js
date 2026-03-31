@@ -16,7 +16,7 @@ const settings = window.NS4_BG.settings;
 
 // Default BG music
 if (!settings.bgMusic) {
-    settings.bgMusic = "/son/Beautiful_Slow_Instrumental_-_music_for_studying,_background,_healing,_relax_-_relaxdaily_N°062(48k)";       // Son prensipal default
+    settings.bgMusic = "file:///android_asset/son/Beautiful_Slow_Instrumental_-_music_for_studying,_background,_healing,_relax_-_relaxdaily_N°062(48k).mp3";       // Son prensipal default
     settings.bgMusicAuto = true;
     settings.soundOn = true;
     localStorage.setItem("ns4_settings", JSON.stringify(settings));
