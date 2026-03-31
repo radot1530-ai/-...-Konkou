@@ -16,7 +16,7 @@
 		android:appComponentFactory="androidx.core.app.CoreComponentFactory" 
 		android:debuggable="true" 
 		android:extractNativeLibs="true" 
-		android:label="NS4 Quiz" 
+		android:label="NS4 Support Plus" 
 		android:theme="@style/Theme.AppCompat.Light.NoActionBar"
 		android:usesCleartextTraffic="true">
 
