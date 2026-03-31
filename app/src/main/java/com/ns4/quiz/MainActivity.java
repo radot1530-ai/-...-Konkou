@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setDatabaseEnabled(true);
 
         // 🔒 SECURITY SETTINGS
-        webSettings.setAllowFileAccess(false); // bloke aksè dirèk nan fichye
+   webSettings.setMediaPlaybackRequiresUserGesture(false);
+        webSettings.setAllowFileAccess(false); //
+ bloke aksè dirèk nan fichye 
         webSettings.setAllowContentAccess(false);
 
         webSettings.setAllowFileAccessFromFileURLs(false);
