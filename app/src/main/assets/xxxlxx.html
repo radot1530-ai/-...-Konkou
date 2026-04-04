@@ -1,0 +1,2964 @@
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modèl Egzamen</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:navajowhite;
+  margin:0;
+  padding:20px;
+  text-align:center;
+}
+
+/* TIT */
+h2{ color:#1e88e5; }
+
+/* MATYÈ */
+.subjects{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.subject{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* CARD */
+.examCard{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+/* IMAGE */
+.examImg{
+  width:200px;
+  height:280px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* HIDDEN */
+.hidden{ display:none; }
+
+/* ================= ZOOM PRO ================= */
+.zoomModal{
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  overflow:hidden;
+}
+
+.zoomContent{
+  position:relative;
+  width:100%; height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.zoomContent img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  transition:transform 0.3s;
+  touch-action:none;
+  cursor:grab;
+}
+
+/* CLOSE */
+.closeBtn{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:30px;
+  color:white;
+  z-index:10;
+  cursor:pointer;
+}
+
+/* NAV */
+.navBtn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:30px;
+  color:white;
+  padding:10px;
+  z-index:10;
+  cursor:pointer;
+}
+.prevBtn{left:10px;}
+.nextBtn{right:10px;}
+</style>
+</head>
+
+<body>
+
+<h2>📄 Modèl Egzamen</h2>
+
+<!-- MATYÈ -->
+<div class="subjects">
+  <div class="subject" onclick="show('stat')">📊 Matematik</div>
+  <div class="subject" onclick="show('fizik')">⚛️ Fizik</div>
+  <div class="subject" onclick="show('filozofi')">🧠 Filozofi</div>
+  <div class="subject" onclick="show('chimi')">🧪 Chimi</div>
+  <div class="subject" onclick="show('svt')">🧬 Byoloji/Jewoloji</div>
+  <div class="subject" onclick="show('eng')">🏴 Anglè</div>
+  <div class="subject" onclick="show('esp')">🇪🇸 Espanyòl</div>
+  <div class="subject" onclick="show('kreyòl')">🇭🇹 Kreyòl</div>
+  <div class="subject" onclick="show('ekonomi')">💰 Ekonomi</div>
+  <div class="subject" onclick="show('art')">🎨 Art</div>
+    <div class="subject" onclick="show('istwa')"> 🗿Syans Sosyal</div>
+</div>
+
+<!-- Egzanp Egzamen -->
+<div id="stat" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Matematik</h3>
+    <img src="/data/AmatematikModèl1.jpg" class="examImg" onclick="zoom(this)">
+      <div class="correction"><b>PARTIE A (40 pwen)</b><br>
+​
+
+
+<b>1. Repons : <span style="color:green;">-1</span></b><br>
+
+
+<i>Eksplikasyon :</i> Pou jwenn <b>koefisyan direktè</b> tanjant lan, nou kalkile derivale f'(x) nan pwen x₀ = 0.
+<br>
+
+f(x) = 2 - ln(x+1)
+<br>
+
+f'(x) = -1 / (x+1)
+
+<br>
+Lè x = 0 : f'(0) = -1 / (0+1) = <b>-1</b><br>
+​
+
+
+<b>2. Repons : <span style="color:green;">738</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Sa se yon <b>swit aritmetik</b>(7, 11, 15...). Premye tèm a₁ = 7, rezon r = 4, dènye tèm aₙ = 75.
+<br><br>
+
+Chèche kantite tèm (n) : 75 = 7 + (n-1)4 → 68 = 4(n-1) → 17 = n-1 → <b>n = 18</b><br><br>.
+
+
+Kalkile Sòm (S) : S = (n/2) × (a₁ + aₙ) = (18/2) × (7 + 75) = 9 × 82 = <b>738</b><br><br>.
+​
+
+
+<b>3. Repons : <span style="color:green;">0,9</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Nou dwe adisyone pwobabilite kote X ≥ 0.
+<br><br>
+
+P(X ≥ 0) = P(X=2) + P(X=4) + P(X=5)
+<br><br>
+
+P(X ≥ 0) = 0,3 + 0,2 + 0,4 = <b>0,9</b><br>.
+​
+
+
+<b>4. Repons : <span style="color:green;">a = 6,7 ak b = 13,8</span></b><br>
+
+
+<i>Eksplikasyon :</i> Pou pwen mwayen G(x̄, ȳ) :
+
+
+x̄ = (8,2 + 7,6 + a + 6,1 + 9,1) / 5 = 7,54 → 31 + a = 37,7 → <b>a = 6,7</b><br><br>.
+
+
+ȳ = (14 + 12,1 + 15,2 + b + 16,3) / 5 = 14,28 → 57,6 + b = 71,4 → <b>b = 13,8</b><br><br>.
+​
+
+
+<b>5. Repons : <span style="color:green;">z = (x + 2) / (x² + 1) + i(2x - 1) / (x² + 1)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Nou miltipliye pa konjige denominatè a (x - i) :
+<br>
+
+z = [(1 + 2i)(x - i)] / [(x + i)(x - i)] = (x - i + 2xi - 2i²) / (x² + 1).
+<br>
+
+Paske i² = -1 : z = (x + 2 + i(2x - 1)) / (x² + 1).<br>
+​<hr>
+<b>PARTIE B (60 pwen)</b><br><br>
+​
+
+
+<b>Exercice 1 : Fonksyon Logaritm</b><br>
+
+
+<b>a) Ensemble de définition Df :</b><br><br>
+
+
+Kondisyon : (x + 2) / (3 - x) > 0.
+<br>
+
+Rasin yo se -2 ak 3. Daprè tablo siy lan, fraksyon an pozitif ant rasin yo.
+<br><br>
+
+<b>Df = ]-2 ; 3[</b><br>.
+
+
+
+<b>b) Limites nan bòn yo :</b><br><br>
+
+Lè x → -2⁺ : lim f(x) = ln(0⁺) = <b>-∞</b><br><br>.
+
+
+Lè x → 3⁻ : lim f(x) = ln(+∞) = <b>+∞</b><br><br>.
+
+
+
+<b>c) Variations :</b><br><br>
+
+
+f'(x) = u'/u kote u = (x+2)/(3-x). u' = 5 / (3-x)².
+
+
+f'(x) = 5 / [(3-x)(x+2)]. Paske x ∈ ]-2;3[, f'(x) toujou <b>pozitif (+)</b><br><br>.
+
+
+Fonksyon an <b>croissante</b><br><br> sou tout Df.
+​
+
+<br><br>
+
+<b>Exercice 2 : Barycentre</b><br>
+
+
+<b>a) AG an fonksyon de AB ak AC :</b><br><br>
+
+
+Sòm pwa yo : -2 + 1 + 4 = 3.
+
+
+3AG = 1AB + 4AC → <b>AG = (1/3)AB + (4/3)AC</b><br>.
+
+
+
+<b>b) Barycentres partiels :</b><br><br>
+
+
+Nou poze H = bar{(B, 1), (C, 4)}. Konsa, <b>G = bar{(A, -2), (H, 5)}</b><br>.
+
+
+
+<b>c) Kalkile AG :</b><br><br>
+
+
+Triyang lan rektang nan A (AB ⊥ AC).
+
+<br>
+BC² = AB² + AC². Si AC = 3AB : (3√10)² = AB² + (3AB)² → 90 = 10AB² → AB = 3, AC = 9.
+<br>
+
+AG² = (1/3)²AB² + (4/3)²AC² = (1/9)(9) + (16/9)(81) = 1 + 144 = 145.
+<br>
+
+<b>AG = √145</b><br>.
+​
+
+
+
+<b>Exercice 3 : Probabilités (Dé pipé)</b><br><br>
+
+
+<b>a) Probabilité chak evènman :</b><br><br>
+
+
+p(1)+p(2)+p(3)+p(4)+p(5)+p(6) = 1.
+<br>
+
+3p(1) + 3(2/3)p(1) = 1 → 5p(1) = 1 → <b>p(1)=p(3)=p(5)=0,2</b><br><br> epi <b>p(2)=p(4)=p(6)=0,133... (2/15)</b><br><br>.
+
+
+
+<b>b) P(Impair) ak P(Pair) :</b><br><br>
+
+
+P(Impair) = 0,2 + 0,2 + 0,2 = <b>0,6</b><br><br>.
+
+
+P(Pair) = 1 - 0,6 = <b>0,4</b><br><br>.
+
+
+
+<b>c) P(1 | Impair) :</b><br><br>
+
+
+P = P(1) / P(Impair) = 0,2 / 0,6 = <b>1/3</b><br><br>.
+
+
+
+<b>d) Loi de probabilité de X :</b><br><br>
+
+
+X=1 (impair) : <b>P(X=1) = 0,6</b><br><br>.
+
+
+X=2 (nimewo 6) : <b>P(X=2) = 2/15</b><br><br>.
+
+
+X=0 (lòt yo: 2, 4) : <b>P(X=0) = 4/15</b><br><br>.
+
+
+
+<b>e) Espérance E(X) :</b><br><br>
+
+
+E(X) = (1 × 0,6) + (2 × 2/15) + (0 × 4/15) = 0,6 + 4/15 = 9/15 + 4/15 = <b>13/15 (0,86)</b><br><br>.
+​
+
+
+
+<b>Exercice 4 : Statistiques</b><br><br>
+
+
+<b>a) Coordonnées pwen mwayen G :</b><br><br>
+
+
+x̄ = (10+11+12+15+16+20) / 6 = 84 / 6 = <b>14</b><br><br>.
+
+
+ȳ = (5+6+6+10+12+15) / 6 = 54 / 6 = <b>9</b><br><br>.
+
+
+<b>G(14 ; 9)</b><br><br>.
+
+
+
+<b>b) Covariance :</b><br><br>
+
+
+Cov(X,Y) = (1/n)∑xᵢyᵢ - x̄ȳ.
+
+
+∑xᵢyᵢ = (10×5)+(11×6)+(12×6)+(15×10)+(16×12)+(20×15) = 50+66+72+150+192+300 = 830.
+
+
+Cov(X,Y) = (830 / 6) - (14 × 9) = 138,33 - 126 = <b>12,33</b><br><br>.
+</div>
+  </div>
+      <div class="examCard">
+    <h3>Egzamen Matematik - Jiyè 2025 SMP</h3>
+    <img src="/data/Amatematikmo2.jpg" class="examImg" onclick="zoom(this)">
+    <div class="correction"><b>Koreksyon :</b><br><br><b>Koreksyon :</b><br><br> <b>PARTIE A (40 pwen)</b><br><br>
+
+
+
+<b>1. Repons : <span style="color:green;">S = {3}</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Pou ln x + ln(2x-1) = ln 15, fòk x > 1/2.
+
+
+ln(x(2x-1)) = ln 15 → 2x² - x - 15 = 0.
+
+
+Diskriminan Δ = 121. Rasin yo se 3 ak -2,5. Paske x dwe pozitif, nou kenbe <b>3</b><br><br> sèlman.
+
+
+
+​<b>2. Repons : <span style="color:green;">π³ / 3</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> I + J = ∫₀ᵖⁱ x² sin²x dx + ∫₀ᵖⁱ x² cos²x dx = ∫₀ᵖⁱ x² (sin²x + cos²x) dx.
+
+
+Paske sin²x + cos²x = 1, nou jwenn ∫₀ᵖⁱ x² dx = [x³/3] nan bòn 0 pou rive π, ki bay <b>π³/3</b><br><br>.
+
+
+
+​<b>3. Repons : <span style="color:green;">U₂ = 7 epi U₃ = 57</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> U₂ = 7U₁ + 8U₀ = 7(1) + 8(0) = <b>7</b><br><br>.
+
+
+U₃ = 7U₂ + 8U₁ = 7(7) + 8(1) = 49 + 8 = <b>57</b><br><br>.
+
+
+
+​<b>4. Repons : <span style="color:green;">4 / 25</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> U₁ = 4 / (1 + 3(4)) = 4 / 13.
+
+
+U₂ (twazyèm tèm nan) = (4/13) / (1 + 3(4/13)) = (4/13) / (25/13) = <b>4 / 25</b><br><br>.
+
+
+
+​<b>5. Repons : <span style="color:green;">z = -2 - 2i</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> z = 2√2 [cos(-3π/4) + i sin(-3π/4)].
+
+
+cos(-3π/4) = -√2/2 epi sin(-3π/4) = -√2/2.
+
+
+z = 2√2 (-√2/2 - i√2/2) = -4/2 - 4i/2 = <b>-2 - 2i</b><br><br>.
+
+
+
+​<b>6. Repons : <span style="color:green;">α = 2, β = -3, λ = 2</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Relasyon 2GC - 3GB + 2GA = 0 vle di pwa pwen A se sa ki devan GA, pwa B se devan GB, epi pwa C se devan GC.
+
+
+Donk : <b>α = 2, β = -3, λ = 2</b><br><br>.
+
+
+
+​<b>7. Repons : <span style="color:green;">E(X) = √7</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> σ(X) = 3 → V(X) = 3² = 9.
+
+
+V(X) = E(X²) - [E(X)]² → 9 = 16 - [E(X)]² → [E(X)]² = 7.
+
+
+Kòm E(X) > 0, <b>E(X) = √7</b><br><br>.
+
+
+
+​<b>8. Repons : <span style="color:green;">1 / 20</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> p(A ∪ B) = p(A) + p(B) - p(A ∩ B).
+
+
+13/20 = 2/5 + 3/10 - p(A ∩ B) → 13/20 = 8/20 + 6/20 - p(A ∩ B).
+
+
+p(A ∩ B) = 14/20 - 13/20 = <b>1 / 20</b><br><br>.
+
+
+
+​<b>9. Repons : <span style="color:green;">-11</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> E(4X - 3) = 4E(X) - 3.
+
+
+E(4X - 3) = 4(-2) - 3 = -8 - 3 = <b>-11</b><br><br>.
+
+
+
+​<b>10. Repons : <span style="color:green;">4,57</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Cov(x,y) = (1/n)∑xᵢyᵢ - x̄ȳ.
+
+
+∑xᵢyᵢ = (0,5×0) + (1,5×1) + (2,5×1,5) + (4×3,5) + (6×4,5) + (7×5,5) = 84,75.
+
+
+Mwayèn x̄ = 3,58 epi ȳ = 2,67. Cov = (84,75 / 6) - (3,58 × 2,67) = 14,125 - 9,55 = <b>4,57</b><br><br>.
+
+
+
+
+​<hr>
+<b>PARTIE B (Trete tout egzèsis yo)</b><br><br>
+
+
+
+<b>1. Fonksyon : f(x) = 1/2 ln((1+x)/(1-x))</b><br><br>
+
+
+<b>a)</b><br><br> Df = <b>]-1 ; 1[</b><br><br> (Paske fòk (1+x)/(1-x) > 0).
+
+
+<b>b)</b><br><br> Limite nan -1⁺ se <b>-∞</b><br><br>. Limite nan 1⁻ se <b>+∞</b><br><br>.
+
+
+<b>c)</b><br><br> f'(x) = 1 / (1 - x²). Paske x ant -1 ak 1, f'(x) toujou pozitif. Fonksyon an <b>croissante</b><br><br>.
+
+
+
+​<b>2. Suit : Uₙ = 2 / (n + 5)</b><br><br>
+
+
+<b>a)</b><br><br> U₀ = 2/5 = <b>0,4</b><br><br>. 4yèm tèm nan se U₃ = 2 / (3+5) = <b>0,25</b><br><br>.
+
+
+<b>b)</b><br><br> Uₙ₊₁ - Uₙ = 2/(n+6) - 2/(n+5) = -2 / [(n+6)(n+5)]. Sa toujou negatif, donk suit la <b>décroissante</b><br><br>.
+
+
+<b>c)</b><br><br> Tout tèm yo ant 0 ak 0,4. Suit la <b>bornée</b><br><br>.
+
+
+<b>d)</b><br><br> Limite Uₙ lè n al nan ∞ se 0. Suit la <b>convergente</b><br><br>.
+
+
+
+​<b>3. Polinòm Kompleks</b><br><br>
+
+
+<b>a)</b><br><br> P(2i) = (2i)³ - 2(2i)² + (4-6i)(2i) - 20 = -8i + 8 + 8i + 12 - 20 = <b>0</b><br><br>.
+
+
+<b>b)</b><br><br> P(z) = (z - 2i)(z² + (2i-2)z - 10i).
+
+
+<b>c)</b><br><br> Rasin yo se : z₀ = 2i, z₁ = 3 + i, z₂ = -1 - 3i.
+
+
+<b>d)</b><br><br> ABC se yon triyang <b>rectangle isocèle</b><br><br> nan pwen A.
+
+
+
+​<b>4. Pwobabilite (7 boul)</b><br><br>
+
+
+<b>a)</b><br><br> Boul impair yo se {1, 3, 5, 7}. Gen 4 boul konsa.
+
+
+P(A) = C(4,2) / C(7,2) = 6 / 21 = <b>2 / 7</b><br><br>.
+
+
+<b>b)</b><br><br> Valè X ka pran se diferans ant de boul : <b>{1, 2, 3, 4, 5, 6}</b><br><br>.
+
+
+<b>c)</b><br><br> Loi : P(X=1)=6/21; P(X=2)=5/21; P(X=3)=4/21; P(X=4)=3/21; P(X=5)=2/21; P(X=6)=1/21.
+
+
+
+​<b>5. Statisik</b><br><br>
+
+
+<b>b)</b><br><br> G(x̄, ȳ) : x̄ = (0+1+2+3+4)/5 = <b>2</b><br><br>. ȳ = (12+10+6+6+2)/5 = <b>7,2</b><br><br>. Donk <b>G(2 ; 7,2)</b><br><br>.
+
+
+<b>c)</b><br><br> r = Cov(x,y) / (σx * σy) = -4,8 / (√2 * √12,16) = -4,8 / 4,93 = <b>-0,97</b><br><br>. (Korelasyon an fò anpil).
+
+
+<b>d)</b><br><br> Droite régression : y = ax + b. a = Cov/V(x) = -4,8 / 2 = -2,4. b = ȳ - ax̄ = 7,2 - (-2,4)(2) = 12.
+
+
+Ekwasyon : <b>y = -2,4x + 12</b><br><br>.</div>
+  </div>
+</div>
+
+<div id="fizik" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Fizik - 2025</h3>
+    <img src="/data/Afizikmodèl1.png" class="examImg" onclick="zoom(this)">
+  <div class="correction"><b>Koreksyon :</b><br><br> <b>PREMIÈRE PARTIE</b><br><br>
+
+
+
+<b>I. Transcrire les phrases (20 pts)</b><br><br>
+
+
+
+<b>1. Repons : <span style="color:green;">déviation / l'intensité du courant</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Sansiblite yon galvanomèt mezire nan ki pwen zui a devye (déviation) lè yon kouran (intensité) travèse li.
+
+<br><br>
+
+<b>2. Repons : <span style="color:green;">l'intensité du courant / la tension</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Nan yon bobin ideyal, kouran an toujou an reta ak 90 degre (quadrature retard) parapò ak tansyon an.
+<br><br>
+
+
+<b>3. Repons : <span style="color:green;">la charge électrique / la différence de potentiel</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Kapasite C a se rapò ant chaj Q a ak tansyon U a (C = Q/U).
+
+<br><br>
+
+<b>4. Repons : <span style="color:green;">le flux magnétique / Weber (Wb)</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Kantite liy chan mayetik ki travèse yon sifas se fli mayetik la, e inite entènasyonal li se Weber.
+
+
+<br><br>
+<b>5. Repons : <span style="color:green;">dérivée première / temps</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Akselerasyon a⃗ se derivasyon vitès v⃗ parapò ak tan an (a⃗ = dv⃗/dt).
+<hr><br><br><br>
+<b>II. Traiter les deux questions (20 pts)</b><br><br>
+
+
+
+<b>1. Condensateurs en parallèle et en série</b><br><br>
+
+
+<b>a) Formules en parallèle :</b><br><br>
+
+
+ * Cas 1 (3 condensateurs identiques C) : <b><span style="color:green;">C_eq = 3C</span></b><br><br>
+ * Cas 2 (condensateurs différents) : <b><span style="color:green;">C_eq = C₁ + C₂ + C₃</span></b><br><br>
+   
+   
+   <i>Eksplikasyon :</i> Lè kondansatè yo an paralèl, kapasite yo adisyone dirèkteman.
+   <br><br>
+   
+   
+   <b>b) Formules en série :</b><br><br>
+   
+   
+ * Cas 1 (identiques) : <b><span style="color:green;">C_eq = C / 3</span></b><br><br>
+   
+   
+ * Cas 2 (différents) : <b><span style="color:green;">1/C_eq = 1/C₁ + 1/C₂ + 1/C₃</span></b><br><br>
+   
+   
+   <i>Eksplikasyon :</i> Lè yo an seri, se envès kapasite yo ki adisyone.
+
+<br><br>
+
+<b>2. Fil conducteur mobile dans un champ magnétique</b><br><br>
+
+
+<b>a) Phénomène :</b><br><br> <b><span style="color:green;">La force de Laplace (ou force électromagnétique)</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Lè yon kouran ap pase nan yon fil ki anndan yon chan mayetik, li sibi yon fòs ki pouse l.
+
+<br><br>
+
+<b>b) Formule et discussion :</b><br><br>
+
+
+Formule : <b><span style="color:green;">F = I × L × B × sin(α)</span></b><br><br>
+
+
+<i>Discussion :</i><br>
+
+
+ * Si α = 0 ou α = π (kouran an paralèl ak chan an), sin(α) = 0, donk <b>F = 0</b><br><br>.
+ * Si α = π/2 (kouran an pèpandikilè ak chan an), sin(α) = 1, donk fòs la maksimòm <b>F = ILB</b><br><br>.
+<hr>
+<b>III. Choisir la réponse correcte (30 pts)</b><br><br>
+
+
+
+<b>1. Condensateur plan (d = 2 cm = 0,02 m ; U = 100 V ; C = 40 pF)</b><br><br>
+
+
+<b>a) La charge prise : <span style="color:green;">4 nC</span></b><br><br> <i>(Remak: Si gen erè nan chwa egzamen an, yo gendwa te vize 40 nC pou yon C = 400 pF)</i>
+<br>
+
+<i>Eksplikasyon :</i> Q = C × U = 40×10⁻¹² F × 100 V = 4000×10⁻¹² C = 4×10⁻⁹ C = 4 nC.
+
+<br>
+
+<b>b) Le champ électrique : <span style="color:green;">5 kV/m</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> E = U / d = 100 / 0,02 = 5000 V/m = 5 kV/m.
+
+<br>
+
+<b>c) La force électrique attractive : <span style="color:green;">20 × 10⁻⁶ N</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Anjeneral nan nivo sa a yo estime fòs la tankou fòs sou yon chaj tès F = Q × E = (4×10⁻⁹) × 5000 = 20×10⁻⁶ N.
+<br><br>
+
+
+<b>2. Courant alternatif : i(t) = 4√2 cos(314t) ; R = 20 Ω ; C = 40 μF</b><br><br>
+
+<br>
+<b>a) Valeur de l'impédance : <span style="color:green;">82 Ω</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Z_c = 1 / (Cω) = 1 / (40×10⁻⁶ × 314) ≈ 79,6 Ω.
+
+<br>
+Z = √(R² + Z_c²) = √(20² + 79,6²) ≈ 82 Ω.
+<br><br>
+
+
+<b>b) L'amplitude du courant : <span style="color:green;">5,65 A</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Anplitid la se I_max, ki se valè ki devan kosinis la: 4√2 ≈ 5,65 A.
+
+<br>
+
+<b>c) L'équation horaire de la tension : <span style="color:green;">u(t) = 328√2 cos(314t - 1,32)</span></b><br><br><br>
+
+
+<i>Eksplikasyon :</i> Tansyon maksimòm U_m = Z × I_m = 82 × 4√2 = 328√2 V.
+
+<br>
+Faz φ: tan(φ) = -Z_c / R = -79,6 / 20 = -3,98. Donk φ = -1,32 rad.
+<hr><br><br>
+<b>DEUXIÈME PARTIE : Problèmes (30 pts)</b><br><br>
+
+<br>
+
+<b>Problème 1 : Cinématique</b><br><br>
+
+<br><br>
+<b>1. Position initiale (à t = 0) : <span style="color:green;">M(1 , 2) ou r⃗ = i⃗ + 2j⃗</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Nou ranplase t pa 0 nan ekwasyon yo. x = 2(0) - 4(0) + 1 = 1. y = 4(0) - 8(0) + 2 = 2.
+
+<br>
+
+<b>2. Trajectoire et équation : <span style="color:green;">y = 2x (C'est une droite)</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Nou gen x = 2t² - 4t + 1 epi y = 4t² - 8t + 2.
+
+Nou wè klèman ke y se de fwa valè x la. y = 2(2t² - 4t + 1) = 2x. Paske fòm lan se y = ax + b, trajectoire la se yon liy dwat.
+
+
+<br><br>
+<b>3. Module du vecteur-vitesse à t = 1 s : <span style="color:green;">0 m/s</span></b><br><br>
+<br>
+
+<i>Eksplikasyon :</i> Pou jwenn vitès la, nou fè derivasyon pozisyon an parapò ak tan (t):
+
+v_x = dx/dt = 4t - 4
+
+v_y = dy/dt = 8t - 8
+
+Lè nou mete t = 1 : v_x = 4(1) - 4 = 0 epi v_y = 8(1) - 8 = 0. Modil vitès la se √(0² + 0²) = 0.
+</div>
+
+  </div>
+    <div class="examCard">
+    <h3>Egzamen Fizik - Jiyè 2022</h3>
+    <img src="/data/AfizikMo2.jpg" class="examImg" onclick="zoom(this)">
+    <div class="correction"><b>Koreksyon :</b><br><br> ​<div class="correction"><b>Koreksyon :</b><br><br> <b>PREMIÈRE PARTIE (20 pts)</b><br><br>
+​
+
+
+<b>I. Transcrire les phrases</b><br><br>
+
+
+
+<b>1. Repons : <span style="color:green;">le flux magnétique / Weber (Wb)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Kantite liy chan mayetik ki pase nan yon sifas se fli mayetik la. Inite l nan sistèm entènasyonal se Weber.
+
+
+
+<b>2. Repons : <span style="color:green;">un Coulomb (1 C) / un Volt (1 V)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Fòmil kapasite a se C = Q/U. Yon Farad (1 F) se kapasite pou kenbe chaj 1 Coulomb lè gen yon tansyon 1 Volt.
+
+
+
+<b>3. Repons : <span style="color:green;">la tension efficace / l'intensité efficace</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Enpedans (Z) yon sikwi altènatif mezire an Ohm, e li egal a rapò ant tansyon efikas la ak kouran efikas la (Z = U / I).
+
+
+
+<b>4. Repons : <span style="color:green;">la célérité (vitesse) / la fréquence</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Longèdonn (λ) se distans yon onn kouvri nan yon peryòd. Li kalkile kòm vitès onn nan (c) divize pa frekans li (f) : λ = c/f.
+
+
+
+<b>5. Repons : <span style="color:green;">noyau instable / rayonnement (ou particule)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Radyoaktivite se lè yon nwayo atomik ki pa estab kraze natirèlman, epi li degaje enèji sou fòm reyon oswa patikil (alfa, beta, gama).
+​<hr>
+<b>II. Traiter les deux questions (20 pts)</b><br><br>
+​
+
+
+<b>1. La boussole</b><br><br>
+
+
+<b>1) Constat et direction : <span style="color:green;">L'aiguille pointe toujours dans la même direction (Nord magnétique).</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Menm lè li deplase, zwi bousòl la toujou reyaji ak chan mayetik latè a pou l montre direksyon Nò-Sid.
+
+
+
+<b>2) Composantes : <span style="color:green;">Composante horizontale (B_H) et Composante verticale (B_V).</span></b><br><br>
+
+
+<i>Eksplikasyon (pou chéma a) :</i> Chan mayetik latè a pa plat. Zwi a fòme yon ang ak liy orizontal la (yo rele sa l'inclinaison magnétique). Nan chema a, ou ta trase yon vektè B total ki panche, avèk yon pwojeksyon orizontal (B_H) ak yon pwojeksyon vètikal desann (B_V).
+
+
+
+​<b>2. Le condensateur plan au laboratoire</b><br><br>
+
+
+<b>a) Source d'énergie : <span style="color:green;">Courant continu (DC)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Pou yon kondansatè chaje kòrèkteman e kenbe chaj la yon sèl fason, yo dwe itilize yon jeneratè kouran kontini (tankou yon batri).
+
+
+
+<b>b) Expérience et constat : <span style="color:green;">La petite lampe s'éteint.</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Ou trase yon sikwi ki gen batri a, switch la, lanp lan, ak kondansatè a an seri. Lè w fèmen switch la, lanp lan ap limen pou yon ti tan paske kouran ap pase pou chaje kondansatè a. Lè l fin chaje nèt (U_condensateur = U_source), kouran an sispann pase (I = 0) epi lanp lan etenn.
+​<hr>
+<b>III. Traiter les deux exercices (20 pts)</b><br><br>
+​
+
+
+<b>1. Courant alternatif : i(t) = 6√2 sin(312t + π/4) ; C = 160 μF</b><br><br>
+
+
+<b>a) Capacitance (Réactance) : <span style="color:green;">Z_C ≈ 20 Ω</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Z_C = 1 / (Cω). ω = 312 rad/s. Z_C = 1 / (160×10⁻⁶ × 312) = 1 / 0,04992 ≈ 20,03 Ω.
+
+
+
+<b>b) Équation de la tension : <span style="color:green;">u(t) = 120√2 sin(312t - π/4)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Nan yon kondansatè pi, tansyon an an reta ak π/2 parapò ak kouran an.
+
+Faz la = π/4 - π/2 = -π/4.
+
+Anplitid U_max = Z_C × I_max = 20 × 6√2 = 120√2 V.
+
+
+
+​<b>2. Groupement de condensateurs (6 de 2 μF)</b><br><br>
+
+
+<b>a) Capacité en série et parallèle :</b><br><br>
+
+
+​En série : <span style="color:green;">C_eq = C / 6 = 2 / 6 = <b>0,33 μF (1/3 μF)</b><br><br></span>.
+​En parallèle : <span style="color:green;">C_eq = 6 × C = 6 × 2 = <b>12 μF</b><br><br></span>.
+
+
+
+<b>b) 3 séries de 2 éléments : <span style="color:green;">C_eq = 3 μF</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Chak ti branch gen 2 kondansatè an seri, kapasite yo se C_s = 2 / 2 = 1 μF. Kòm gen 3 branch konsa an paralèl, nou adisyone yo : 1 + 1 + 1 = 3 μF.
+​<hr>
+<b>DEUXIÈME PARTIE : (40 pts - Nou fè tou de pwoblèm yo)</b><br><br>
+​
+
+
+<b>Problème 1 : Mécanique</b><br><br>
+
+
+<b>1. Théorème de l'énergie cinétique :</b><br><br>
+
+
+<span style="color:green;">La variation de l'énergie cinétique (ΔEc) d'un système matériel entre deux instants est égale à la somme algébrique des travaux (W) des forces extérieures appliquées à ce système pendant le même intervalle de temps. (ΔEc = ΣW)</span>.
+
+
+
+<b>2. Forces résistantes et dynamique :</b><br><br>
+
+
+<b>a) Sens du vecteur force : <span style="color:green;">Sens opposé</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Fòs frenaj la se yon fòs ki ap goumen kont mouvman an pou redwi vitès la. Donk li toujou opoze ak direksyon vitès (v).
+
+
+
+<b>b) Valeur de la force et distance AC :</b><br><br>
+
+
+<i>Kalkil Fòs (f) :</i> Nou aplike T.E.C. ant A ak B. m = 1000 kg, V_A = 25 m/s, V_B = 20 m/s, AB = 50 m.
+
+
+(1/2)m(V_B)² - (1/2)m(V_A)² = -f × AB
+
+
+0,5 × 1000 × (20² - 25²) = -f × 50
+
+
+500 × (400 - 625) = -50f → 500 × (-225) = -50f → -112500 = -50f → <span style="color:green;"><b>f = 2250 N</b><br><br></span>.
+
+
+<i>Kalkil distans AC pou l kanpe (V_C = 0) :</i> T.E.C. ant A ak C.
+
+
+(1/2)m(V_C)² - (1/2)m(V_A)² = -f × AC
+
+
+0 - 0,5 × 1000 × 25² = -2250 × AC → -312500 = -2250 × AC → <span style="color:green;"><b>AC ≈ 138,89 m</b><br><br></span>.
+
+
+
+<b>c) Valeur de l'accélération (a) :</b><br><br>
+
+
+<i>Eksplikasyon :</i> Daprè 2èm lwa Newton (Relation fondamentale de la dynamique) : ΣF = ma. Piske sèl fòs orizontal la se frenaj la : -f = ma.
+
+
+a = -f / m = -2250 / 1000 = <span style="color:green;"><b>-2,25 m/s²</b><br><br></span>. (Li negatif paske se yon deselerasyon).
+​
+
+
+
+<b>Problème 2 : Électromagnétisme (Solénoïde)</b><br><br>
+
+
+<i>Done :</i> B = 22,61 mT = 22,61×10⁻³ T ; Longueur l = 40 cm = 0,4 m ; Diamètre d = 10 cm = 0,1 m ; I = 6 A.
+
+
+
+<b>1. Nombre de spires et longueur du fil :</b><br><br>
+
+
+<i>Nombre de spires (N) :</i> B = μ₀ × (N/l) × I. Avèk μ₀ = 4π×10⁻⁷.
+
+
+N = (B × l) / (μ₀ × I) = (22,61×10⁻³ × 0,4) / (4π×10⁻⁷ × 6) = 0,009044 / (7,5398×10⁻⁶) ≈ <span style="color:green;"><b>1200 spires</b><br><br></span>.
+
+
+<i>Longueur du fil (L_fil) :</i> Se kantite spires miltipliye pa sikonferans yon spire (π × d).
+
+<br>
+L_fil = 1200 × π × 0,1 = 120π ≈ <span style="color:green;"><b>377 m</b><br><br></span>.
+
+
+
+<b>2. Inductance propre (L) :</b><br><br>
+
+
+<i>Eksplikasyon :</i> Fòmil la se L = μ₀ × (N² / l) × S. Sifas S = π × (d/2)² = π × (0,05)².
+<br>
+
+L = 4π×10⁻⁷ × (1200² / 0,4) × (π × 0,0025) ≈ 0,0355 H = <span style="color:green;"><b>35,5 mH</b><br><br></span>.
+
+
+
+<b>3. Force électromotrice auto-induite :</b><br><br>
+
+
+<b>a) Valeur de I₂ :</b><br> e = 3,55 V ; dt = 1/25 s = 0,04 s. I₁ = 6 A.
+<br><br>
+
+<i>Eksplikasyon :</i> Fòmil absoli f.é.m nan se e = L × |ΔI / Δt|. Kòm kouran an ap varye, nou gen :
+
+<br><br>
+3,55 = 0,0355 × |(I₂ - 6) / 0,04|.
+
+<br><br>
+3,55 = 0,8875 × |I₂ - 6|. Donk |I₂ - 6| = 4.
+
+<br><br>
+Paske f.é.m nan se yon repons a yon diminisyon kouran an, I₂ = 6 - 4 = <span style="color:green;"><b>2 A</b><br><br></span>.
+
+
+
+<b>b) f.é.m si i(t) = 8 - 4t :</b><br><br>
+
+
+<i>Eksplikasyon :</i> e = -L × (di/dt). Derivale i(t) la se : di/dt = -4 A/s.
+
+
+e = -0,0355 × (-4) = <span style="color:green;"><b>0,142 V</b><br><br></span>.
+​</div></div>
+  </div>
+</div>
+
+<div id="filozofi" class="hidden">
+    <div class="examCard">
+    <h3>Filozofi - 2025 SES.SVT.SMP</h3>
+    <img src="/data/Afilozofimo2.png" class="examImg" onclick="zoom(this)">
+<div class="correction"><b>Koreksyon : FILOZOFI (Modèl 2025)</b><br><br>
+​
+
+
+<b>A- QUESTIONS DE COURS À RÉPONSE COURTE (40%)</b><br><br>
+
+
+
+<b>Énoncé I</b><br><br>
+
+
+
+<b>1. Repons :</b><br><br> « Philosopher, c’est chercher à comprendre ce qui est juste, vrai ou beau, en dépassant les apparences. »
+
+<br>
+<i>Eksplikasyon :</i> Filozofia se pa sèlman repete sa moun di, se chache verite ki kache dèyè sa nou wè ak je nou.
+
+<br><br>
+
+<b>2. Repons :</b><br><br> Le but de la philosophie est de questionner les valeurs, les croyances et les principes ki regissent notre vie, afin de construire des raisonnements solides.
+<br>
+
+<i>Eksplikasyon :</i> Objektif la se mete dout sou sa nou panse nou konnen pou nou ka panse pi byen epi aji ak plis konesans.
+
+<br><br>
+
+<b>3. Repons :</b><br><br> La philosophie est une activité de l'esprit qui consiste à réfléchir de manière critique et exigeante sur l'existence pour enrichir la pensée et la vie.
+
+<br>
+<i>Eksplikasyon :</i> Se yon fason pou nou itilize entèlijans nou pou nou bay lavi a yon sans ki pi fon.
+
+<br><br>
+
+<b>4. Repons :</b><br><br> Celui qui s’ouvre à une réflexion exigeante, dépasse les préjugés et cherche à comprendre les principes fondamentaux de son existence.
+
+<br>
+<i>Eksplikasyon :</i> Yon moun ki filozòf se yon moun ki pa aksepte tout sa yo di l san li pa egzaminen yo avèk tèt li.
+​
+<br><br><br>
+
+<b>Énoncé II</b><br><br>
+
+
+<br>
+<b>1. Repons :</b><br><br> « La conscience morale est cette voix intérieure qui nous pousse à évaluer nos actions et à ressentir un sentiment de culpabilité ou de fierté. »
+
+<br>
+<i>Eksplikasyon :</i> Se ti vwa ki anndan nou an ki di nou si sa nou fè a bon oswa si li pa bon.
+
+<br><br>
+
+<b>2. Repons :</b><br><br> Sa fonction est de former notre jugement moral et de nous donner la capacité de choisir librement entre le bien et le mal.
+
+<br>
+<i>Eksplikasyon :</i> Konsyans lan sèvi nou gid pou nou pa aji tankou bèt, men pou nou chwazi sa ki dwat.
+
+<br><br>
+
+<b>3. Repons :</b><br><br> Les deux thèses sont : l’éducation et les expériences acquises au fil du temps.
+
+<br>
+<i>Eksplikasyon :</i> Konsyans moral la pa fèt avèk nou, se lekòl, paran, ak lavi a ki aprann nou sa ki byen ak sa ki mal.
+
+<br><br>
+
+<b>4. Repons :</b><br><br> Elle influence nos décisions en agissant comme un juge interne qui évalue la valeur morale de nos actes, provoquant la satisfaction ou le regret.
+<br>
+
+<i>Eksplikasyon :</i> Anvan nou poze yon aksyon, konsyans lan avèti nou, epi apre aksyon an, li jije nou.
+​<hr>
+<b>B- DISSERTATION PHILOSOPHIQUE (60%) - Pwen Oryantasyon</b><br><br>
+
+
+
+<b>Sujet 1 : Philosopher, est-ce chercher des réponses ou apprendre à mieux questionner ?</b><br><br>
+
+
+<i>Lide pou devlopman :</i> Ou ka montre ke menm si filozofi chache verite (repons), pi gwo fòs li se nan poze kesyon (metòd sokratik). Yon bon kesyon souvan pi enpòtan pase yon repons ki ka chanje demen.
+
+<br><br>
+
+<b>Sujet 2 : Peut-on s’affranchir de la conscience morale ?</b><br><br>
+
+<br>
+<i>Lide pou devlopman :</i> Èske yon moun ka viv san konsyans? Ou ka pale de moun ki "amoral" oswa sikopat, men tou montre ke pou sosyete a mache, konsyans se yon obligasyon pou tout moun.<br><br>
+​<hr>
+<b>C- ÉTUDE DE TEXTE : KANT (60%)</b><br><br>
+
+<br><br>
+
+<b>1. Thèse de l'auteur :</b><br><br> La moralité authentique consiste à accomplir son devoir par pur respect pour la loi morale, indépendamment de tout intérêt personnel ou de toute crainte.
+
+<br>
+<i>Eksplikasyon :</i> Kant di yon aksyon bon sèlman si w fè l paske se devwa w, pa paske w ap chache yon avantaj.
+
+<br><br>
+
+<b>2. Étapes de l'argumentation :</b><br><br>
+<br>
+
+​Kant commence par exclure l'intérêt et les inclinations comme bases de la morale.<br>
+​Il définit la "volonté bonne" comme celle qui obéit à la raison.
+<br>
+
+​Il introduit l'impératif catégorique : agir selon une maxime universelle.
+
+<br>
+​Il termine en liant la dignité humaine à la capacité de l'homme de se soumettre librement à la loi de la raison.
+
+<br><br>
+
+<b>3. Agir moralement :</b><br><br> C'est agir par devoir, en suivant une règle que l'on souhaiterait voir devenir une loi universelle pour tous les êtres humains, sans attendre de récompense.
+<br>
+
+<i>Eksplikasyon :</i> Si w ap ede yon moun sèlman pou yo wè w sou rezo sosyal, sa pa moral dapre Kant. Li moral si w fè l paske se sa ki jis.
+
+<br><br>
+
+<b>4. Intérêt philosophique :</b><br><br> Ce texte souligne l'autonomie de la volonté humaine. Il montre que la valeur d'un homme ne dépend pas de son succès, mais de la pureté de ses intentions et de sa rationalité.
+<br>
+
+<i>Eksplikasyon :</i> Teks sa a enpòtan paske li mete diyite moun nan nivo entèlijans li ak kapasite l pou l chwazi fè sa ki byen san fòs kote.
+​</div>
+</div>
+</div>
+
+<div id="chimi" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Chimi - 2023 (SES)</h3>
+    <img src="/data/Achimimodèl1.jpg" class="examImg" onclick="zoom(this)">
+    <div class="correction"><b>Koreksyon :</b><br><br>​<div c<b>Koreksyon : CHIMIE (Bac Juillet 2023)</b><br><br><br>
+​
+
+
+<b>PARTIE A : Recopier et compléter (20 pts)</b><br><br>
+<br>
+
+
+​<b>Repons : <span style="color:green;">isomères</span></b><br><br>
+​
+
+<i>Eksplikasyon :</i> Izomè se konpoze ki gen menm kantite atòm (menm fòmil brit) men ki pa ranje menm jan nan lespas.
+<br><br>
+
+
+​<b>Repons : <span style="color:green;">-CH₂OH / -CHOH-</span></b><br>
+
+
+<i>Eksplikasyon :</i> Fonksyon alkòl la chanje selon kote kabòn ki gen -OH a ye. Alkòl primè gen -OH nan bout chèn nan.
+<br><br>
+
+
+​<b>Repons : <span style="color:green;">un dimère / une dimérisation</span></b><br><br> (Oswa <b>polymère / polymérisation</b> si nou konsidere n molekil)
+
+<br>
+<i>Eksplikasyon :</i> Lè nou kole de molekil menm jan, nou fè yon "dimère". Si se anpil, se yon polymère.
+
+<br><br>
+
+​<b>Repons : <span style="color:green;">l'éthanol (ou alcool éthylique) / fermentation</span></b><br>
+
+
+<i>Eksplikasyon :</i> Se alkòl sa a nou jwenn nan bweson tankou kleren oswa byè, yo jwenn li lè ledven manje sik.
+
+<br><br>
+
+​<b>Repons : <span style="color:green;">CₙH₂ₙ₋₂ / linéaire</span></b><br>
+
+
+<i>Eksplikasyon :</i> Alsin yo gen yon trip lyezon ki fè de kabòn yo toujou sou yon liy dwat.
+
+<br><br>
+
+​<b>Repons : <span style="color:green;">le pH / un pH-mètre (ou papier pH)</span></b><br>
+
+
+<i>Eksplikasyon :</i> pH la pa gen inite, li sèlman di nou si yon dlo asid oswa baz.
+
+<br><br>
+
+​<b>Repons : <span style="color:green;">les cycloalcanes / CₙH₂ₙ</span></b><br>
+
+
+<i>Eksplikasyon :</i> Se alkan ki fè wonn (sik), fòmil yo pèdi 2 idwojèn parapò ak alkan nòmal yo.
+
+
+<br><br>
+​<b>Repons : <span style="color:green;">H⁺/H₂ / Zn²⁺/Zn</span></b><br>
+
+
+<i>Eksplikasyon :</i> Nan yon reyaksyon redox, nou toujou gen yon moun ki bay elektwon ak yon moun ki pran yo.
+
+<br><br>
+
+​<b>Repons : <span style="color:green;">aux aldéhydes / aux cétones</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Gwoup carbonyle a (C=O) se li ki baz de fanmi chimik sa yo.
+<br><br>
+
+
+​<b>Repons : <span style="color:green;">H₃O⁺ (ou H⁺) / virer au rouge</span></b><br>
+
+
+<i>Eksplikasyon :</i> Asid yo lage iyon idwoniyòm ki fè koulè endikatè yo chanje.<br><br><br>
+​<hr>
+<b>PARTIE B : Équilibrer les équations (20 pts)</b><br><br>
+​<b><span style="color:green;">Al₄C₃ + 12H₂O → 4Al(OH)₃ + 3CH₄</span></b><br><br>
+​
+
+2. <b><span style="color:green;">Fe₂O₃ + 6HNO₃ → 2Fe(NO₃)₃ + 3H₂O</span></b><br><br>
+
+
+3. <b><span style="color:green;">Na₂S + 2HCl → 2NaCl + H₂S</span></b><br><br>
+
+
+4. <b><span style="color:green;">C₂H₄ + HCl → C₂H₅Cl</span></b> (Réaction d'addition)<br><br>
+
+
+5. <b><span style="color:green;">C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O</span></b><br><br> (Combustion complète)<br>
+​<hr>
+<b>PARTIE C : Questions sur les alcools et acides (15 pts)</b><br><br>
+​
+
+
+<b>1. Acide éthanoïque (CH₃COOH)</b><br><br>
+
+
+a) Avec le Zinc : <b><span style="color:green;">2CH₃COOH + Zn → (CH₃COO)₂Zn + H₂</span></b><br><br>
+
+
+b) Avec la soude : <b><span style="color:green;">CH₃COOH + NaOH → CH₃COONa + H₂O</span></b><br><br><br>
+
+
+
+<b>2. Hydratation du propène</b><br><br>
+
+
+a) Formules semi-développées :
+<br><br>
+
+​<b><span style="color:green;">CH₃-CH₂-CH₂OH</span></b>(Propan-1-ol)
+​<b><span style="color:green;">CH₃-CHOH-CH₃</span></b> (Propan-2-ol)<br>
+
+
+b) Nom officiel de l'espèce majoritaire : <b><span style="color:green;">Propan-2-ol</span></b><br>
+
+
+<i>Eksplikasyon :</i> Daprè règle Markovnikov la, idwojèn nan al kole kote ki gen plis idwojèn deja a.<br><br>
+​<hr>
+<b>PARTIE D : Étude de texte "Anti-chlorose" (15 pts)</b><br><br>
+​
+
+
+<b>1. Métaux indispensables :</b> <b><span style="color:green;">Le magnésium (Mg), le fer (Fe), l'azote (N)*, le manganèse (Mn) et le zinc (Zn).</span></b>(*Nòt: Azòt se yon non-metal men li nan lis teks la kòm eleman).
+
+<br><br><br>
+
+<b>2. Formule de l'ion :</b><b><span style="color:green;">Fe²⁺</span></b><br><br>
+
+
+
+<b>3. Autre nom :</b><b><span style="color:green;">Ion ferreux</span></b><br><br>
+
+
+
+<b>4. Photosynthèse :</b> C'est le processus par lequel les plantes vertes synthétisent des matières organiques (glucides) à partir de l'eau, du gaz carbonique (CO₂) et de l'énergie solaire.
+​<hr><br><br>
+<b>PARTIE E : Problèmes (30 pts)</b><br><br>
+​
+
+
+<b>I. Hydrolyse du carbure d'aluminium (Al₄C₃)</b>
+
+
+a) Équation : <b><span style="color:green;">Al₄C₃ + 12H₂O → 4Al(OH)₃ + 3CH₄</span></b><br><br>
+
+
+b) Degré de pureté :
+<br>
+
+​Masse molaire Al₄C₃ = (4×27) + (3×12) = 144 g/mol.
+​Volume molaire (TPN) = 22,4 L/mol.
+
+<br>
+​Moles de CH₄ obtenues = 7 / 22,4 = 0,3125 mol.
+<br>
+
+​Moles de Al₄C₃ pur nécessaires = 0,3125 / 3 = 0,10416 mol.
+<br>
+
+​Masse pure = 0,10416 × 144 = 15 g.
+
+<br>
+​<b><span style="color:green;">Pureté = (15 / 20) × 100 = 75%</span></b><br><br>.
+<br>
+
+c) Volume d'air pour combustion :
+
+<br>
+​Équation : CH₄ + 2O₂ → CO₂ + 2H₂O.
+<br>
+
+​V_O₂ = 2 × V_CH₄ = 2 × 7 = 14 L.
+
+<br>
+​<b><span style="color:green;">V_air = 5 × V_O₂ = 5 × 14 = 70 L</span></b><br><br>.
+​
+
+
+<b>II. Chloration du benzène (C₆H₆)</b><br><br>
+
+
+a) Masse et Volume de gaz (pour une monochloration) :
+
+<br>
+​Masse benzène = Volume × ρ = 100 × 0,9 = <b><span style="color:green;">90 g</span></b><br><br>.
+​Moles benzène = 90 / 78 ≈ 1,154 mol.
+
+<br>
+​Gaz dégagé (HCl) : V = 1,154 × 22,4 = <b><span style="color:green;">25,85 L</span></b><br><br>.
+
+<br>
+b) Nombre de moles de dichlore (Cl₂) :
+<br>
+
+​n_Cl₂ = n_benzène = <b><span style="color:green;">1,154 mol</span></b><br><br>.
+​</div></div>
+  </div>
+    <div class="examCard">
+    <h3>Egzamen Chimi - 2025 (SES)</h3>
+    <img src="/data/Achimimo2.png" class="examImg" onclick="zoom(this)">
+<div class="correction"><b>Koreksyon : CHIMIE (Modèl 2025 - Seri SES)</b><br><br>
+
+
+
+<b>PARTIE A : Questions de cours (20 pts)</b><br><br>
+
+
+
+<b>I- Recopier et compléter</b><br><br>
+
+
+
+ * <b>Repons : <span style="color:green;">dioxyde de carbone (CO₂) / l'eau (H₂O)</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Lè yon idwokabi (tankou gaz lakay) boule nèt ak anpil oksijèn, li toujou bay gaz kabonik ak dlo.
+<br><br>
+
+
+ * <b>Repons : <span style="color:green;">trimérisation / trimère</span></b><br><br>
+   <br>
+   
+   <i>Eksplikasyon :</i> "Tri" vle di twa. Lè 3 molekil kole ansanm, yo fè yon trimè.
+   
+   <br><br>
+   
+ * <b>Repons : <span style="color:green;">l'éthanol / fermentation</span></b><br><br>
+   
+   <br>
+   <i>Eksplikasyon :</i> Etanòl se sèl alkòl nou ka bwè (ak moderasyon!). Yo jwenn li lè ledven dekonpoze sik ki nan fwi oswa kann.
+   
+   <br>
+   
+ * <b>Repons : <span style="color:green;">H⁺/H₂ / Al³⁺/Al</span></b><br><br>
+   <br>
+   
+   <i>Eksplikasyon :</i> Nan ekwasyon sa a, Al pèdi elektwon (li vin Al³⁺) epi H⁺ pran yo (li vin H₂).
+   <br>
+   
+   
+ * <b>Repons : <span style="color:green;">aux aldéhydes / aux cétones</span></b><br><br>
+   <br>
+   
+   <i>Eksplikasyon :</i> Gwoup -CO- a se "siyati" fanmi aldeyid ak setòn yo.
+
+<br><br>
+
+<b>II- Choisir la réponse correcte</b><br><br>
+
+<br><br>
+
+ * <b>Repons : <span style="color:green;">C₆H₁₂</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Idwojenasyon konplè benzèn nan bay cyclohexane.
+
+<br>
+
+2. <b>Repons : <span style="color:green;">digonale</span></b><br><br>
+
+<br>
+<i>Eksplikasyon :</i> Acetylène (C₂H₂) se yon molekil ki dwat (linéaire), donk jeyometri a se digonal.
+
+<br><br>
+
+3. <b>Repons : <span style="color:green;">CₙH₂ₙO</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Se fòmil jeneral pou konpoze kabonile yo.
+
+
+<br>
+4. <b>Repons : <span style="color:green;">10⁻⁷ mol/L</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Nan yon dlo ki nèit (pH = 7), konsantrasyon iyon yo se 10 à la puissance -pH.
+<br><br>
+
+
+5. <b>Repons : <span style="color:green;">+ VII</span></b><br><br>
+
+
+<i>Eksplikasyon :</i> Nan MnO₄⁻, oksijèn vo -2 (donk -8 pou 4 oksijèn). Pou total la fè -1, fòk Mn la vo +7.<br><br><br>
+<hr>
+<b>PARTIE B : Exercices (20 pts - Nou trete tou de pou w ka gen chwa)</b><br><br>
+
+
+
+<b>I- Isomères du pentane (C₅H₁₂)</b><br><br>
+
+
+ * <b>Pentane (linéaire) :</b> CH₃-CH₂-CH₂-CH₂-CH₃
+
+<br><br>
+2. <b>2-méthylbutane :</b>CH₃-CH(CH₃)-CH₂-CH₃
+
+<br><br>
+3. <b>2,2-diméthylpropane :</b><br><br> CH₃-C(CH₃)₂-CH₃
+
+
+<br><br><br>
+
+
+<b>II- Réaction AgNO₃ + Zn</b><br><br>
+<br>
+
+a) <b>Méthode électronique :</b><br><br>
+<br>
+
+Oxydation : Zn → Zn²⁺ + 2e⁻
+<br>
+
+Réduction : 2Ag⁺ + 2e⁻ → 2Ag
+
+<br>
+b) <b>Oxydant : Ag⁺</b> (li pran elektwon) / <b>Réducteur : Zn</b>(li bay elektwon).
+
+<br><br>
+c) <b>Couples : Ag⁺/Ag et Zn²⁺/Zn</b><br><br>.
+<hr>
+<b>PARTIE C : Étude de texte "Acide éthanoïque" (30 pts)</b><br><br>
+ * <b>Groupement fonctionnel : <span style="color:green;">-COOH (groupe carboxyle)</span></b><br><br>
+   
+   
+   
+ * <b>Explications :</b><br><br>
+ * <b>Hydrophile :</b><br><br> Se yon pati nan molekil la ki "renmen" dlo, li ka fè lyezon ak dlo pou l fonn ladan l.
+   
+   <br><br>
+ * <b>Hydrophobe :</b><br><br> Se yon pati ki "pè" dlo, li pa vle melanje ak dlo (tankou lwil).
+   
+   <br><br>
+   
+ * <b>Méthodes de préparation :</b><br><br>
+   <br><br>
+   
+ * Oxydation de l'éthanol : <b>C₂H₅OH + O₂ → CH₃COOH + H₂O</b><br><br>
+   
+   
+ * Oxydation de l'éthanal : <b>2CH₃CHO + O₂ → 2CH₃COOH</b><br><br>
+<hr>
+<b>PARTIE D : Problèmes (30 pts)</b><br><br>
+
+
+
+<b>I- Alcène gazeux (d = 1,448)</b><br><br>
+
+
+a) <b>Identification :</b><br><br>
+
+
+ * Masse molaire M = d × 29 = 1,448 × 29 ≈ <b>42 g/mol</b><br><br>.
+
+
+2. Formule brute : CₙH₂ₙ → 14n = 42 → n = 3. Donk <b>C₃H₆</b><br><br>.
+
+
+3. Semi-développée : <b>CH₂=CH-CH₃</b>(Propène).
+
+
+4. Ions : <b>H₃O⁺ et CH₃COO⁻</b>.
+
+<br><br><br>
+
+b) <b>Volume de dichlore (Cl₂) :</b><br><br>
+
+
+Réaction : C₃H₆ + Cl₂ → C₃H₆Cl₂
+
+<br>
+n(alcène) = 5 / 42 ≈ 0,119 mol.
+<br>
+
+V(Cl₂) = 0,119 × 22,4 ≈ <b>2,67 L</b><br><br>.
+
+
+
+<b>II- Combustion du méthane (CH₄)</b><br><br>
+
+
+a) <b>Volume d'air :</b><br><br>
+
+
+CH₄ + 2O₂ → CO₂ + 2H₂O
+<br>
+
+V(O₂) = 2 × V(CH₄) = 2 × 2,5 L = 5 L.
+<br>
+
+V(air) = 5 × V(O₂) = 5 × 5 = <b>25 L</b><br><br>.
+
+
+
+b) <b>Volume de CO₂ :</b><br><br>
+
+
+Daprè koyefisyan yo, V(CO₂) = V(CH₄) = <b>2,5 L</b><br><br>.
+
+
+
+c) <b>Masse de précipité (CaCO₃) :</b><br><br>
+
+
+CO₂ + Ca(OH)₂ → CaCO₃ + H₂O
+
+<br>
+n(CO₂) = 2,5 / 22,4 ≈ 0,1116 mol.
+
+<br>
+m(CaCO₃) = n × M = 0,1116 × 100 = <b>11,16 g</b><br><br>.
+</div>
+  </div>
+  </div>
+  
+  
+<div id="svt" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen SVT</h3>
+    <img src="/data/ASVTModèl1.png" class="examImg" onclick="zoom(this)">
+    ​<div class="correction"><b>Koreksyon : SVT (Modèl 2025)</b><br><br>
+​<h2 style="color: #2c3e50;">BIOLOGIE (50 pwen)</h2>
+​<b>A- PREMIERE PARTIE (20 pwen)</b><br><br>
+
+<br><br><br>
+
+<b>I- Compléter les énoncés (10 pts) :</b><br><br>
+
+
+​Le cylindraxe d’un neurone est encore appelé <span style="color:green;"><b>axone</b><br><br></span>.
+​
+
+2. Le sucre de l’ADN est appelé <span style="color:green;"><b>désoxyribose</b><br><br></span>.
+
+
+3. Les génotypes du groupe sanguin B sont <span style="color:green;"><b>[B,B] (homozygote) et [B,O] (hétérozygote)</b><br><br></span>.
+<br>
+
+4. L’emplacement d’un gène sur un chromosome est <span style="color:green;"><b>le locus</b><br><br></span>.
+
+<br>
+5. Les chromosomes non sexuels sont appelés <span style="color:green;"><b>autosomes</b></span>.
+​<br><br><br>
+
+
+<b>II- Relier les éléments (5 pts) :</b><br><br>
+
+<br>
+​Mitose    <b>Division des cellules somatiques</b>
+​Méiose    <b>Division des gonies (production des gamètes)</b><br>
+​Interphase    <b>Duplication de l'ADN</b><br>
+​Chromosome    <b>Structure constituée de gènes</b><br>
+​Chromatide    <b>Bras des chromosomes</b><br><br>
+​
+
+
+<b>III- Définir (5 pts) :</b><br><br>
+
+
+​<b>Glycémie :</b><br>e kantite sik (glucose) ki gen nan san an.
+​<b>Synapse :</b><br>Se zòn kote de selil nève (neurones) kominike antre yo pou pase enfòmasyon.
+​<br><br><br>
+
+
+<b>B- DEUXIEME PARTIE (20 pwen)</b><br><br>
+
+
+
+<b>I- Hormones :</b><br>
+
+
+​Minéral dans la thyroxine : <b>L'iode (I)</b><br><br>.
+​Organes cibles de la parathormone : <b>Les os et les reins</b><br><br>.
+​Hormones antagonistes du pancréas : <b>L'insuline</b><br><br> (ki desann sik) ak <b>le glucagon</b> (ki moute sik).
+​
+<br><br>
+
+<b>II- Questions de réflexion :</b><br><br>
+
+
+​Sources Vitamine A : <b>Karat (manti), fwa, lwil pwason, ak ze.</b><br>
+​Pathologies (hypersécrétion hormone somatotope) : <b>Gigantisme</b><br><br> (kay timoun) ak <b>Acromégalie</b><br> (kay granmoun).
+​Différence Axone/Dendrite : Axone lan voye mesaj la ale (influx centrifuge), dendrite la resevwa mesaj la (influx centripète).
+​Génotype fille daltonienne : <b>X_{d}X_{d}</b><br>.
+​
+<br>
+
+<b>C- TROISIEME PARTIE (10 pwen) - Monohybridisme</b><br><br>
+
+
+​<b>Génotype des ascendants :</b><br><br> LL (Lisses) × rr (ridés).
+​<b>F1 :</b><br><br> 100% Lr (Tout pwa yo ap lis nan aparans men yo gen jèn "ridé" a kache).
+​<b>F2 (Croisement Lr × Lr) :</b><br><br> 75% Lis, 25% Ridé (Proportions 3/4, 1/4).
+​<b>Test de différenciation :</b><br><br> Yo rele l <b>Test-cross</b>> oswa <b>Back-cross</b><br> (kwaze yon moun ki gen fenotip dominan ak yon moun ki resesif).
+​<br><br><br>
+<hr>
+
+​<h2 style="color: #2c3e50;">GEOLOGIE (50 pwen)</h2>
+​<b>A- PREMIERE PARTIE (20 pwen)</b><br><br>
+
+<br>
+
+<b>I- Compléter les énoncés :</b><br><br>
+
+
+​Les gaz de l’atmosphère primitive sont <span style="color:green;"><b>vapeur d'eau, CO₂, azote, méthane</b><br><br>Il n'y avait pas d'oxygène à cette époque</span>.
+​Le lieu de concentration des minerais s’appelle <span style="color:green;"><b>un gisement</b><br><br></span>.
+​Les fossiles de l’ère secondaire sont <span style="color:green;"><b>les ammonites et les dinosaures</b><br><br></span>.
+​Les éléments chimiques présents dans le manteau sont <span style="color:green;"><b>Silicium et Magnésium (SIMA)</b><br><br>
+Nan jeyoloji, kwout oseyanik la ak pati siperyè manto a rele SIMA (Si + Mg), alòske kwout kontinantal la rele SIAL (Si + Al).</span>.
+​Petit corps céleste composé de roches et de glace : <span style="color:green;"><b>une comète</b><br><br></span>.
+​
+<br><br>
+
+<b>II- Associer les colonnes :</b><br><br>
+
+<br><br>
+​Stratosphère    <b>Ozone</b><br><br>
+​Ionosphère    <b>Réflexion des ondes courtes</b><br><br>
+​Troposphère    <b>Couche la plus basse / Phénomènes météo</b><br><br>
+​Mésosphère    <b>Étoile filante</b><br><br>
+​<br><br>
+
+
+<b>B- DEUXIEME PARTIE (20 pwen)</b><br><br>
+
+<br><br>
+
+<b>I- Stratigraphie :</b><br><br>
+
+​<b>Principes :</b><br><br> Principe de superposition (sa ki anba pi vye) ak principe de continuité.
+​<b>Discordance :</b><br><br> Se lè kouch tè yo pa swiv yon lòd nòmal, sa vle di te gen yon gwo evènman (tankou de dlo ki retire oswa tranbleman tè) ki koupe sekans lan.
+​
+<br><br>
+
+<b>II- Questions :</b><br><br>
+
+<br><br>
+​Gaz à effet de serre : <b>CO₂ (gaz kabonik) ak CH₄ (méthane)</b><br><br>.<br>
+​Lignée humaine : Se istwa evolisyon depi nan premye zansèt nou yo (Australopithèque) rive nan Homo Sapiens (moun jodi a).
+​
+<br><br>
+
+<b>C- TROISIEME PARTIE (10 pwen)</b><br><br>
+
+
+​<b>Minéraux métalliques en Haïti :</b><br><br> L'Or (nan Nò), le Cuivre (Douvray), et la Bauxite (Miragoâne).
+​<b>Utilisations du calcaire :</b><br><br> Fabrikasyon siman, lacho, ak wòch pou bati kay.
+​</div>
+</div>
+</div>
+
+<div id="eng" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Anglè - Jiyè 2025 SMP.SVT.SES</h3>
+    <img src="/data/Aanglè1.png" class="examImg" onclick="zoom(this)">
+        <img src="/data/Aanglèmodèl1.1.png" class="examImg" onclick="zoom(this)">
+​<div class="correction"><b>Koreksyon : ANGLÈ (Modèl 2025 - Seri SVT/SES/SMP)</b><br><br>
+​<h2 style="color: #2c3e50;">I- Compétence Linguistique (40%)</h2>
+​<b>A- Write the correct form of the verb in parentheses (10%)</b><br><br>
+
+
+​She will give you a call as soon as she <span style="color:green;"><b>gets</b><br><br></span> my phone.
+​
+
+2. The doctor recommends that the patient <span style="color:green;"><b>take</b><br><br></span> some rest. (Sujonctif an anglè).
+
+
+3. If she <span style="color:green;"><b>had called</b><br><br></span> me she would have known the information. (Kondisyonèl pase).
+
+
+4. I <span style="color:green;"><b>have not received</b><br><br></span> any letters so far.
+
+
+5. Keep silent! The baby <span style="color:green;"><b>is sleeping</b><br><br></span> on the floor.
+​
+
+
+<b>B- Circle the right answer (10%)</b><br><br>
+
+
+​She will do it, <span style="color:green;"><b>won’t she?</b><br><br></span> (Question tag).
+​
+
+2. <span style="color:green;"><b>How far</b><br><br></span> is your school? - Ten miles from here.
+
+
+3. My first language is Polish. <span style="color:green;"><b>Yours</b><br><br></span> is English.
+
+
+4. I can’t eat this soup. It has <span style="color:green;"><b>too much</b><br><br></span> salt. (Sèl pa ka konte, nou itilize "much").
+
+
+5. I couldn’t find <span style="color:green;"><b>any</b><br><br></span> job in South Dakota.
+​
+
+
+<b>C- Rewrite the sentences as indicated (10%)</b><br><br>
+
+
+​I have a friend <span style="color:green;"><b>who</b><br><br></span> works at NASA.
+​
+
+2. She won't attend the meeting, <span style="color:green;"><b>neither</b><br><br></span> will she send a representative.
+
+
+3. <span style="color:green;"><b>Although</b><br><br></span> he studied very hard for the exam, he didn't pass it.
+
+
+4. He told me <span style="color:green;"><b>to give him my money</b><br><br></span>.
+
+
+5. Cathy will be able to go on holiday <span style="color:green;"><b>if she saves enough money</b><br><br></span>.
+​
+
+
+<b>D- Fill in the gaps (10%)</b><br><br>
+
+
+​<span style="color:green;"><b>Flood</b><br><br></span>: A large amount of water covering an area that is usually dry.
+​
+
+2. <span style="color:green;"><b>Earthquake</b><br><br></span>: A sudden violent movement of the Earth's surface.
+
+
+3. <span style="color:green;"><b>Global warming</b><br><br></span>: A gradual increase in world temperatures.
+
+
+4. <span style="color:green;"><b>Environment</b><br><br></span>: The air, water and land in or on which people, animals and plants live.
+
+
+5. <span style="color:green;"><b>Biodiversity</b><br><br></span>: The number and variety of plant and animal species that exist.
+​<h2 style="color: #2c3e50;">II- Compétence Interprétative (40%)</h2>
+​<b>A- Questions on the text "Cybercriminals" (15%)</b><br><br>
+
+
+
+​<b>What are cybercriminals?</b><br><br>
+​
+
+<i>Repons:</i> They are individuals or groups who use computers and the internet to commit crimes like hacking or stealing personal information.
+
+
+
+2. <b>What tactics do they use?</b><br><br>
+
+
+<i>Repons:</i> They use tactics like phishing, spreading viruses, and ransom ware to trick people.
+
+
+
+3. <b>How can people protect themselves?</b><br><br>
+
+
+<i>Repons:</i> People can protect themselves by using strong passwords, keeping software updated, and using firewalls or antivirus programs.
+​<<h2 style="color: #2c3e50;">II- Compétence Interprétative (Suite)</h2>
+<b>A- Questions on the text (15%) - Suite</b><br><br>
+
+
+<b>Why do cybercriminals target businesses and individuals?</b><br><br>
+
+
+<i>Repons :</i> They target them to gain access to sensitive data or financial information.
+
+
+
+2. <b>How can individuals protect themselves?</b><br><br>
+
+
+<i>Repons :</i> Individuals can protect themselves by using strong passwords, keeping software updated, and being cautious of suspicious emails.
+
+
+
+3. <b>Name two techniques used by cybercriminals:</b><br><br>
+
+
+<i>Repons :</i> Phishing and ransom ware (or hacking).
+
+
+
+<b>B- Personal Opinion (10%)</b><br><br>
+
+
+<i>Kesyon : Do you think it's important to be aware of all new cyber threats?</i>
+
+
+<i>Repons (Modèl) :</i> Yes, it is very important because technology changes fast. If we are aware of new threats, we can update our security measures and protect our money and private lives from hackers.
+
+
+
+<b>C- Vocabulary from the text (15%)</b><br><br>
+
+
+Term for "Tricking people into providing personal information": <b>Phishing</b><br><br>.
+
+
+2. Synonym for "careful": <b>Cautious</b><br><br>.
+
+
+3. Antonym for "public": <b>Private (ou sensitive/individual)</b><br><br>.
+<h2 style="color: #2c3e50;">III- Compétence Discursive et Argumentative (20%)</h2>
+<b>A- Problem-solving situation (10%)</b><br><br>
+
+
+<i>Sitiasyon : Your computer crashes and you lose your work. What would you do?</i>
+
+
+<i>Repons (Eksplikasyon an kreyòl) :</i> Nan yon ka konsa, fòk ou eksplike w ap kenbe kalm ou, w ap eseye restart òdinatè a, epi pwochèn fwa w ap toujou fè yon "backup" (sovgad) sou yon USB oswa nan Cloud la (Google Drive/OneDrive).
+
+
+
+<b>B- Choose a or b (10%)</b><br><br>
+
+
+
+<b>a. Reorder the sentences (Coffee Maker) :</b><br><br>
+
+
+Men lòd kòrèk la pou fè kafe a:
+To brew coffee, use a drip coffee maker, start by measuring out the coffee grounds.
+Place a coffee filter in the basket of the coffee maker and add the measured grounds.
+Next, fill the coffee maker’s reservoir with cold water; use about six ounces of water for each cup you want to make.
+For every cup of coffee, you typically need one tablespoon of grounds.
+Finally, turn on the machine and wait for the coffee to drip into the pot below.
+
+
+
+<b>b. Opinion paragraph (10 lines) :</b><br><br>
+
+
+<i>Sijè : Should people travel less to protect the environment?</i>
+
+
+<i>Ide pou devlopman :</i> Elèv la ka di wi paske avyon ak machin bay anpil polisyon (CO2), oswa li ka di non paske vwayaje enpòtan pou ekonomi ak kilti, men nou dwe itilize mwayen transpò ki pi "green" (ekolojik).
+  </div>
+</div>
+</div>
+
+<div id="esp" class="hidden">
+  <div class="examCard">
+    <h3>Espanyòl - 2025 SES SVT SMP</h3>
+    <img src="/data/Aespanyòlmodèl1.png" class="examImg" onclick="zoom(this)">
+​<div class="correction"><b>Koreksyon : ESPANYÒL (Modèl 2025 - Seri SES/SVT/SMP)</b><br><br>
+​<h2 style="color: #2c3e50;">I- Competencia Lingüística (40%)</h2>
+​<b>A- Escoger la forma verbal adecuada (10%)</b><br><br>
+
+
+​Quiero tener una mujer que <span style="color:green;"><b>sea</b><br><br></span> muy bonita. (Subjonctif paske se yon swè).
+​
+
+2. <span style="color:green;"><b>Era</b><br><br></span> la una de la mañana cuando murió mi hermano mayor. (Yo itilize "era" pou bay lè nan pase).
+
+
+3. No es fácil <span style="color:green;"><b>resolver</b><br><br></span> el problema de este país. (Enfinitif apre "es fácil/difícil").
+
+
+4. No <span style="color:green;"><b>vengas</b><br><br></span> a verme a esta hora. (Enperatif negatif).
+
+
+5. Es necesario que usted lo <span style="color:green;"><b>pague</b><br><br></span>.
+​
+
+
+<b>B- Elegir la palabra que convenga (10%)</b><br><br>
+
+
+​¿<span style="color:green;"><b>Por qué</b><br><br></span> no viniste a la escuela ayer? (Poukisa).
+​
+
+2. Esta señora es muy <span style="color:green;"><b>guapísima</b><br><br></span>.
+
+
+3. Vive ahora <span style="color:green;"><b>en</b><br><br></span> Jacmel.
+
+
+4. <span style="color:green;"><b>Aquel</b><br><br></span> monte que ves allá es el más alto del mundo. (Y ap pale de yon bagay ki lwen).
+
+
+5. El tigre es más cruel <span style="color:green;"><b>que</b><br><br></span> el perro.
+​
+
+
+<b>C- Seguir construyendo oraciones (10%)</b><br><br>
+
+
+​Tú : <span style="color:green;"><b>puedes resolver tus problemas</b><br><br></span>.
+​
+
+2. Federico : <span style="color:green;"><b>puede resolver sus problemas</b><br><br></span>.
+
+
+3. Tú y yo : <span style="color:green;"><b>podemos resolver nuestros problemas</b><br><br></span>.
+
+
+4. Vosotros : <span style="color:green;"><b>podéis resolver vuestros problemas</b><br><br></span>.
+
+
+5. Mis amigos : <span style="color:green;"><b>pueden resolver sus problemas</b><br><br></span>.
+​
+
+
+<b>D- Seleccionar 10 profesiones (10%)</b><br><br>
+
+
+Moun nan lis la ki se pwofese oswa metye se:
+​<b>Arquitecto</b><br><br>, 2. <b>Músico</b><br><br>, 3. <b>Sastre</b><br><br>, 4. <b>Informático</b><br><br>, 5. <b>Piloto</b><br><br>, 6. <b>Pianista</b><br><br>, 7. <b>Abogado</b><br><br>, 8. <b>Agrónomo</b><br><br>, 9. <b>Periodista</b><br><br>, 10. <b>Mecánico</b><br><br>.
+​<h2 style="color: #2c3e50;">II- Competencia Interpretativa (40%)</h2>
+​<b>A- Preguntas sobre el texto "Una oferta de empleo inesperada" (15%)</b><br><br>
+
+
+​<b>¿Quién le ofreció el trabajo a Carol?</b><br><br>
+​
+
+<i>Repons :</i> Un hombre llamado Miguel se lo ofreció.
+
+
+
+2. <b>¿Dónde estaba la oficina?</b><br><br>
+
+
+<i>Repons :</i> Estaba en una calle del centro, cerca de la puerta de un portal.
+
+
+
+3. <b>¿Qué habría que hacer para triunfar en esta profesión?</b><br><br>
+
+
+<i>Repons :</i> Habría que tener potencial y estar dispuesta a trabajar muy duro.
+​
+
+
+<b>C- Buscar en el texto (15%)</b><br><br>
+
+
+​Sinónimo de "despacho": <span style="color:green;"><b>oficina</b><br><br></span>.
+​
+
+2. Antónimo de "se alejó": <span style="color:green;"><b>se acercó</b><br><br></span>.
+
+
+3. Dos verbos en pretérito indefinido: <span style="color:green;"><b>murió, decidió</b><br><br></span> (ou "vio", "fue").
+​<h2 style="color: #2c3e50;">III- Competencia Discursiva (20%)</h2>
+​<b>A- Ordenar las oraciones (10%)</b><br><br>
+
+
+Lòd kòrèk pou fè paragraf la se:
+​(d) En efecto, no tienen ellos competencia profesional ni experiencia adecuada.
+​(e) Además, los padres no los alientan para escoger una profesión y ganarse la vida según sus gustos.
+​(c) Sin embargo, muchos de ellos tienen oficios y diplomas adecuados sin poder encontrar realmente un trabajo.
+​(b) Luego, a ellos no les gusta aprender oficios sin poder integrar el mundo laboral.
+​(a) En definitiva, no se puede salir bien en la vida sin tener un oficio cualquiera.
+​</div>
+  </div>
+</div>
+
+<div id="kreyòl" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Kreyòl</h3>
+    <img src="/data/Akreyòlmodèl1.png" class="examImg" onclick="zoom(this)">
+<div class="correction"><b>Koreksyon : KREYÒL (Bakaloreya Jiyè 2022)</b><br><br>
+​<h2 style="color: #2c3e50;">PREMYE PATI - Konpreyansyon Tèks (30 pwen)</h2>
+​<b>A kisa otè a fè referans lè li di: "M pa rekonèt Ispanyola."? (6 pts)</b><br><br>
+​
+
+<i>Repons:</i> Li fè referans ak <span style="color:green;"><b>degadasyon, chanjman negatif, ak soufrans</b><br><br></span> peyi a (Ayiti/Ispanyola) ap viv. Peyi a tèlman pèdi bèlte l ak lapè l, otè a santi se pa menm kote li te konnen an ankò.
+
+
+
+​<b>Eske tèks la ekri an pwoz ou byen an vè? Jistifye. (6 pts)</b><br><br>
+​
+
+<i>Repons:</i> Tèks la ekri <span style="color:green;"><b>an vè</b><br><br></span>.
+<i>Jistifikasyon:</i> Nou wè sa paske li gen <span style="color:green;"><b>stwòf, liy (vè) ki kout, ak rim</b><br><br></span> (tankou "lapenn" ak "venn", oswa "cheri" ak "peri").
+
+
+
+​<b>Ki kote, daprè ou menm, otè a fè referans a maladi nan tèks la? (6 pts)</b><br><br>
+​
+
+<i>Repons:</i> Li fè referans a maladi nan espresyon <span style="color:green;"><b>"Ladwòg mechanste agogo"</b><br><br></span>. "Mechanste" ak "Ladwòg" reprezante yon gwo maladi k ap wonyen sosyete a nan fon nanm li.
+
+
+
+​<b>Ki tip rim ou jwenn nan 4 dènye liy 4yèm estwòf la? (6 pts)</b><br><br>
+​
+
+<i>Liy yo: "...dèyè n / ...priyè n" ak "...cheri / ...peri"</i>.
+<i>Repons:</i> Sa se yon <span style="color:green;"><b>rim plat (oswa suivan)</b><br><br></span>, ki gen estrikti AABB.
+
+
+
+​<b>Kilès pwonon pèsonèl dezyèm pèsòn nan (w / ou) reprezante nan tèks la? (6 pts)</b><br><br>
+​
+
+<i>Repons:</i> Pwonon sa yo reprezante <span style="color:green;"><b>Peyi Ayiti</b><br><br></span> (Ayiti Toma). (Egzanp nan tèks la: "Ayiti manman cheri, Men nou chita wè w ap peri").
+​
+
+<hr>
+
+​<h2 style="color: #2c3e50;">B- Gramè – Vokabilè – Tradiksyon (40 pwen)</h2>
+​<b>1. Fè de (2) fraz senp sa yo tounen yon (1) fraz konplèks:</b><br><br>
+
+
+<i>Repons:</i> <span style="color:green;"><b>Li bat kat la pou li bay chak moun sou tab la yon lo.</b><br><br></span> (Itilizasyon konjonksyon sibòdinasyon "pou").
+
+
+
+​<b>2. Bay de (2) sans fraz anba a kapab genyen: "Papit pèdi pitit dirèktè a."</b><br><br>
+
+
+<i>Sans 1:</i> <span style="color:green;"><b>Papit (kòm sijè) lakòz pitit moun ki direktè a pèdi.</b><br><br></span>
+
+
+<i>Sans 2:</i> <span style="color:green;"><b>Timoun ki rele Papit la, ki se pitit direktè a, pèdi.</b><br><br></span>
+
+
+
+​<b>3. Ekri yon ti tèks powetik ki gen kat (4) vè kote w ap itilize rim anbrase (ABBA).</b><br><br>
+
+
+<i>Repons (Modèl):</i>
+
+
+<span style="color:green;">
+Mwen renmen gade <b>lanati</b><br><br> (A) 
+
+Lè solèy la ap bay bèl <b>koulè</b><br><br> (B) 
+
+Kè mwen toujou ranpli ak <b>chalè</b><br><br> (B) 
+
+Paske peyi m tounen yon <b>paradi</b><br><br> (A)
+</span>
+
+
+
+​<b>4. Fè yon fraz pou chak tip predika sa yo:</b><br><br>
+
+
+a) Predika adjektival : <span style="color:green;"><b>Peyi mwen an bèl anpil.</b><br><br></span>
+
+
+b) Predika nominal : <span style="color:green;"><b>Zonbi se yon gwo mit.</b><br><br></span>
+
+
+ch) Predika prepozisyonèl : <span style="color:green;"><b>Elèv yo nan klas la.</b><br><br></span>
+
+
+
+​<b>5. Ki figi estil ki genyen nan fraz anba a: "Ti bebe a bwè bibon an."</b><br><br>
+
+
+<i>Repons:</i> Se yon <span style="color:green;"><b>Metonimi</b><br><br></span>. (Bebe a pa bwè plastik la, li bwè lèt ki <i>anndan</i> bibon an).
+
+
+
+​<b>6. Presize tan ak aspè chak predika nan fraz anba yo:</b><br><br>
+
+
+​<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+<tr style="background-color: #ecf0f1;">
+<th>Fraz</th>
+<th>Tan</th>
+<th>Aspè</th>
+</tr>
+<tr>
+<td>Kiltivatè a te jwenn angrè a.</td>
+<td><span style="color:green;"><b>Pase</b><br><br></span></td>
+<td><span style="color:green;"><b>Akonpli (Pèfektif)</b><br><br></span></td>
+</tr>
+<tr>
+<td>Papa m benyen chak maten.</td>
+<td><span style="color:green;"><b>Prezan</b><br><br></span></td>
+<td><span style="color:green;"><b>Abityèl</b><br><br></span></td>
+</tr>
+<tr>
+<td>Premye Minis la kòmanse pale.</td>
+<td><span style="color:green;"><b>Prezan</b><br><br></span></td>
+<td><span style="color:green;"><b>Inkoatif</b><br><br></span></td>
+</tr>
+</table>
+
+
+​<b>7. Tradui fraz sa a an fransè: "Siwo myèl bon pou lasante."</b><br><br>
+
+
+<i>Repons:</i> <span style="color:green;"><b>Le miel est bon pour la santé.</b><br><br></span>
+
+
+
+​<b>8. Ki sans, daprè ou menm, pwovèb sa a genyen: "Madichon ou bay bèlmè ou se manman ou li rive."</b><br><br>
+
+
+<i>Repons:</i> <span style="color:green;"><b>Sa w swete ki mal pou yon lòt moun (menm si w pa renmen l), se sou pwòp fanmi w oswa moun ou renmen li ka retounen. Fòk nou evite swete maladi ou malè pou lòt moun.</b><br><br></span>
+​
+
+<hr>
+
+​<h2 style="color: #2c3e50;">DEZYÈM PATI (10 pwen)</h2>
+​<b>1- Bay jan literè tèks la. (5 pts)</b><br><br>
+
+
+<i>Repons:</i> Se yon <span style="color:green;"><b>Powèm (Pwezi lirik)</b><br><br></span>.
+
+
+
+​<b>2- Kilès ki otè Choukoun? (5 pts)</b><br><br>
+
+
+<i>Repons:</i> <span style="color:green;"><b>Oswald Durand</b><br><br></span>.
+​
+
+<hr>
+
+​<h2 style="color: #2c3e50;">TWAZYÈM PATI : Pwodiksyon Ekri (25 pwen)</h2>
+<i>Nòt pou pwofesè a / Aplikasyon an:</i> Elèv la dwe chwazi youn nan sijè yo. Si se sijè 1 an (Lèt motivasyon), li dwe respekte fòma yon lèt ofisyèl (Dat, fòmil salitasyon, rezon aplikasyon an, kalite li genyen, fòmil politès). Si se sijè 2 a (Tèks agimantatif sou ensekirite), li dwe genyen yon Entwodiksyon ki poze pwoblèm nan, yon Devlopman kote li prezante 2 gwo lide yo, epi yon Konklizyon avèk opinyon pa l.
+​</div>
+  </div>
+</div>
+<div id="ekonomi" class="hidden">
+  <div class="examCard">
+    <h3>Ekonomi - Août 2024</h3>
+    <img src="/data/Aekonomimodèl1.jpg" class="examImg" onclick="zoom(this)">
+​<div class="correction"><b>Koreksyon : EKONOMI (Bakaloreya Out 2024 - Seri SES)</b><br><br>
+​<h2 style="color: #2c3e50;">PARTIE A (40 points)</h2>
+​<b>I- Question sur la compréhension du texte (30 Pts)</b><br><br>
+
+
+<b>a) Définir les expressions suivantes :</b><br><br>
+
+
+​<b>Economie verte :</b><br><br> Daprè tèks la, se yon aktivite ekonomik ki pèmèt amelyore byennèt moun ak ekite sosyal, pandan l ap redui anpil anpil risk pou anviwònman an ak rate resous natirèl yo.
+​<b>Economie grise :</b><br><br> Se modèl ekonomik ki pa respekte anviwònman an (tankou polisyon, gaspiyaj, oswa destriksyon resous natirèl ak ekosistèm yo).
+
+
+
+​<b>b) Relever dans le texte les objectifs de l'économie verte :</b><br><br>
+
+
+<i>Repons :</i> Objektif yo se: Amelyorasyon byennèt moun, kenbe ekite sosyal, redui risk anviwonmantal, redui rate resous yo, epi kenbe kapital natirèl la pou jenerasyon k ap vini yo.
+
+
+
+​<b>c) Enumérer les principes du développement durable :</b><br><br>
+
+
+<i>Repons (kèk prensip kle) :</i> Prensip solidarite (ant jenerasyon jodi a ak sa k ap vini yo), prensip prekosyon, prensip "pollueur-payeur" (moun ki fè polisyon an dwe peye), ak prensip patisipasyon sitwayen.
+
+
+
+​<b>d) Expliquer le lien existant entre l'économie verte et le développement durable :</b><br><br>
+
+
+<i>Repons :</i> L'économie verte se yon zouti, yon "mwayen" pou pèmèt nou rive nan "objektif" la, ki se le développement durable. Li aplike règ devlopman dirab yo nan fason nou pwodui ak konsome.
+
+
+
+​<b>II- Recopier et compléter le texte (10 points)</b><br><br>
+
+
+Men tèks la konplete avèk mo ki kòrèk yo :
+
+
+"Un bien collectif est <span style="color:green;"><b>indivisible</b><br><br></span> car le fait qu'il soit <span style="color:green;"><b>consommé</b><br><br></span> par une personne n'interdit pas aux autres d'en faire le même <span style="color:green;"><b>usage</b><br><br></span>. Il devient alors difficile de le faire <span style="color:green;"><b>payer</b><br><br></span> : la tentation est forte d'adopter une attitude de <span style="color:green;"><b>passager clandestin</b><br><br></span>, c'est-à-dire de profiter du bien sans participer à son <span style="color:green;"><b>financement</b><br><br></span>. Le marché ne peut pas alors <span style="color:green;"><b>fournir</b><br><br></span> ce type de bien, alors que le <span style="color:green;"><b>besoin</b><br><br></span> social existe. Une solution possible est de faire appel aux <span style="color:green;"><b>pouvoirs publics</b><br><br></span> pour le produire et de le financer par <span style="color:green;"><b>l'impôt</b><br><br></span>."
+​
+
+<hr>
+
+​<h2 style="color: #2c3e50;">PARTIE B (40 points)</h2>
+​<b>III- Exercice sur le Monopole</b><br><br>
+
+
+<i>Done :</i> Fonksyon demann X = 1200 - 4P epi Kou total CT = 500 + 60X.
+
+
+
+​<b>a) Déterminer le prix (P) en fonction de la quantité (X) :</b><br><br>
+
+
+Nou pran ekwasyon demann lan epi nou tire P :
+<br><br><br>
+
+4P = 1200 - X
+<br><br><br>
+
+P = 1200 - X / 4
+<br><br><br>
+
+<span style="color:green;"><b>P = 300 - 0.25X</b><br><br></span>
+
+
+
+​<b>b) Donner la fonction du revenu total (RT) :</b><br><br>
+
+
+Revenu Total la se Pri miltipliye pa Kantite (RT = P \times X).
+<br><br>
+
+RT = (300 - 0.25X) × (X)
+
+
+<span style="color:green;"><b>RT = 300X - 0.25X²</b><br><br></span>
+
+
+
+​<b>c) Trouver la fonction du profit (\pi) :</b><br><br>
+
+
+Pwofi a se Revenu Total mwens Kou Total (\pi = RT - CT).
+
+<br><br>
+\pi = (300X - 0.25X²) - (500 + 60X)
+<br><br>
+
+\pi = 300X - 0.25X² - 500 - 60X
+<br><br>
+
+<span style="color:green;"><b>\pi = -0.25X² + 240X - 500</b><br><br></span>
+
+<br>
+
+​<b>d) Calculer la quantité optimale à produire :</b><br><br>
+
+
+Kantite ki bay pi gwo pwofi a se lè derive fonksyon pwofi a egal a zewo (\pi' = 0).
+
+<br><br>
+\pi' = -0.50X + 240 = 0
+<br><br>
+
+0.50X = 240
+<br><br>
+
+X = 240 / 0.50
+<br>
+
+<span style="color:green;"><b>X = 480 inite.</b><br><br></span>
+
+<br>
+
+​<b>e) Evaluer le profit réalisé :</b><br><br>
+
+
+Nou ranplase X ak 480 nan fonksyon pwofi a :
+
+
+\pi = -0.25(480)² + 240(480) - 500
+
+
+\pi = -0.25(230400) + 115200 - 500
+
+
+\pi = -57600 + 115200 - 500
+
+
+<span style="color:green;"><b>\pi = 57100</b><br><br></span> (Se pwofi maksimòm lan).
+​
+
+<hr>
+
+<b>IV- Exercice Macroéconomique (Tableau DG et OG)</b><br><br><br>
+
+
+
+​<b>a) Où se situe l'équilibre macroéconomique ?</b><br><br>
+
+
+<i>Repons :</i> Ekilib la fèt kote Demande Globale (DG) egal ak Offre Globale (OG). Nan tablo a, nou wè sa rive lè :
+
+
+<span style="color:green;"><b>Niveau des prix = 110</b><br><br></span> epi <span style="color:green;"><b>PIB d'équilibre = 750 MG</b><br><br></span>.
+
+
+
+​<b>b) Tracer la courbe :</b><br><br>
+
+
+<i>Nòt pou koreksyon:</i> Elèv la dwe trase yon repè ortogonal. Aks x la (orizontal) se PIB reyèl la (Kantite), aks y la (vètikal) se Nivo pri yo. Koub OG a ap monte, koub DG a ap desann, epi yo kwaze nan pwen (750, 110).
+
+
+
+​<b>c) Si le PIB potentiel se chiffre à 810 MG, préciser le type d'équilibre macroéconomique :</b><br><br>
+
+
+<i>Repons :</i> Piske PIB ekilib la (750 MG) pi piti pase PIB potansyèl la (810 MG), gen yon defisi nan pwodiksyon an parapò ak sa peyi a ta ka pwodui nòmalman. Nou rele sa yon <span style="color:green;"><b>équilibre de sous-emploi</b><br><br></span> (gen chomaj nan ekonomi an).
+
+<br><br><br>
+
+​<b>d) Expliquer pourquoi la courbe de demande agrégée a une pente négative :</b><br><br>
+
+
+<i>Repons :</i> Li gen yon pant negatif paske lè nivo jeneral pri yo ap monte, pouvwa dacha lajan an ap desann (effet d'encaisse réelle). Konsa, konsomatè yo achte mwens, epi envestisman yo ka diminye tou paske to enterè yo gen tandans monte.
+​<br><br>
+
+<hr>
+
+​<h2 style="color: #2c3e50;">PARTIE C (20 points) - Dissertation / Analyse</h2>
+<i>(Elèv la dwe trete youn nan 2 sijè yo)</i>
+
+<br><br>
+
+​<b>Analyse 1 : L'impact d'une politique budgétaire expansionniste sur la demande agrégée :</b><br><br>
+
+<br><br>
+<i>Pwen pou devlope :</i> Yon politik bidjetè ekspansyonis (Leta ogmante depans li oswa redui taks) ap fè Demann Agreje a (DG) deplase al sou bò dwat. Sa ap kreye plis travay, ogmante PIB reyèl la, men li ka fè nivo pri yo monte tou (enflasyon) si ekonomi an pre nivo potansyèl li.
+​
+<br><br><br>
+
+<b>Analyse 2 : Ressemblances entre l'Ecole Classique et la Physiocratie :</b><br><br>
+<br><br>
+
+<i>Pwen pou devlope :</i> Tou de lekòl panse sa yo kwè nan libète ekonomik (Laissez-faire, laissez-passer). Yo kwè mache a ka regle tèt li san Leta pa bezwen antre nan afè ekonomik (Ordre naturel). Yo mete aksan sou pwopriyete prive kòm motè devlopman.
+​</div>
+  </div>
+    <div class="examCard">
+    <h3>Ekonomi - Jen 2025</h3>
+    <img src="/data/Aekonomimo2.png" class="examImg" onclick="zoom(this)">
+<div class="correction"><b>Koreksyon : EKONOMI (Texte Modèle Juin 2025)</b><br><br>
+<h2 style="color: #2c3e50;">PARTIE A (40 Pts)</h2>
+<b>I- Questions sur la compréhension du texte (20 Pts)</b><br><br>
+
+
+<b>a) Définir la notion de « troc ».</b><br><br>
+
+
+<i>Repons :</i> Twòk la (troc) se yon operasyon kote yo <span style="color:green;"><b>echanje yon machandiz oswa yon sèvis dirèkteman pou yon lòt machandiz oswa yon lòt sèvis</b><br><br></span>, san yo pa sèvi ak lajan (monnen).
+<br><br>
+
+
+<b>b) Identifier un exemple concret de troc moderne.</b><br><br>
+<br>
+
+<i>Repons :</i> Daprè tèks la, yon egzanp konkrè se lè Peugeot <span style="color:green;"><b>vann machin a Madagascar an echanj pou klou jiwòf</b><br><br></span> (clous de girofle).
+
+<br><br>
+
+<b>c) Donner le principal avantage du troc pour certains pays.</b><br><br>
+
+<br>
+<i>Repons :</i> Li pèmèt peyi yo <span style="color:green;"><b>debarase yo fasilman de yon machandiz</b><br><br></span> yo ta gen anpil difikilte pou vann otreman, epi li ede yo fè komès menm lè yo manke lajan (devises).
+
+<br><br><br>
+
+<b>d) Relever deux agents économiques qui favorisent le retour du troc.</b><br><br>
+
+<br>
+<i>Repons :</i> De (2) ajan ekonomik yo mansyone nan tèks la se <span style="color:green;"><b>Gouvènman yo</b><br><br></span> ak <span style="color:green;"><b>Bankye yo</b><br><br></span>.
+
+<br><br><br>
+
+<b>e) Expliquer pourquoi actuellement on parle de la « renaissance du troc ».</b><br><br>
+
+
+<i>Repons :</i> Yo pale de renesans twòk paske malgre anpil moun te panse li te disparèt depi plizyè syèk, jodi a li <span style="color:green;"><b>retounen an fòs nan echanj ekonomik mondyal yo</b><br><br></span> (miltilateralis), gouvènman yo ankouraje l, epi li vin tounen yon pratik modèn ki trè efikas.
+
+<br><br><br>
+
+<b>II- Recopier et compléter le texte ci-dessous (10 Pts)</b><br><br>
+
+<br>
+Le <span style="color:green;"><b>budget</b><br><br></span> de l’État est un document juridique et comptable qui permet aux gouvernements d'exprimer ses orientations politiques, économiques et sociales tout en assurant une <span style="color:green;"><b>gestion</b><br><br></span> efficace des ressources nationales. Dans ce document, on prévoit l'ensemble des <span style="color:green;"><b>recettes</b><br><br></span> et des dépenses publiques pour un exercice fiscal. À la fin de l'exercice, le solde budgétaire peut être : <span style="color:green;"><b>excédentaire</b><br><br></span>, si les recettes sont supérieures aux dépenses ; <span style="color:green;"><b>déficitaire</b><br><br></span>, si les recettes sont inférieures aux dépenses ; ou équilibré, si elles sont égales.
+
+<br><br><br>
+
+<b>III- En se référant à l'équation fondamentale de la macro-économie : PIB = C + I + G + (X - M), préciser à quel agrégat correspond chacune des opérations suivantes : (10 Pts)</b><br><br>
+<br>
+
+1- Quand Haïti vend des tonnes de riz à l'étranger chaque année. 
+<br>
+<span style="color:green;"><b>   (X) Exportasyon</b><br><br></span>
+<br><br>
+
+2- Le 15 décembre 2020, le groupe Délimart a inauguré une nouvelle succursale à Turgeau. 
+<br>
+<span style="color:green;"><b>   (I) Envestisman</b><br><br></span><br><br>
+
+
+3- Pour l'exercice fiscal 2024-2025, le MENFP utilise plus de 29 milliards de gourdes comme dépenses de personnel. 
+<br>
+<span style="color:green;"><b>   (G) Depans Gouvènman / Piblik</b><br><br></span>
+
+
+4- Puisque nous ne produisons pas de blé dans le pays, Haïti en achète depuis les USA, le Canada et l'Union Européenne (UE). 
+<br>
+<span style="color:green;"><b>   (M) Enpòtasyon</b><br><br></span>
+
+<br><br>
+5- Les ménages haïtiens utilisent environ 120 000 tonnes de maïs local par année. 
+<br><br>
+<span style="color:green;"><b>   (C) Konsomasyon</b><br><br></span>
+<br><br><br>
+
+<hr>
+
+<h2 style="color: #2c3e50;">PARTIE B : Résoudre les exercices suivants (40 Pts)</h2>
+<b>IV- Sur le marché d'un bien spécifique...</b><br><br>
+<br><br>
+
+<i>Done :</i> CT = 3q² + 450q + 500 ak P = -1.5q + 1350.
+
+<br><br>
+
+<b>a) Trouver l'expression du revenu total.</b><br><br>
+
+
+Revenu Total la se Pri w miltipliye pa Kantite: RT = P \times q
+
+<br><br>
+RT = (-1.5q + 1350) × (q)
+
+
+<span style="color:green;"><b>RT = -1.5q² + 1350q</b><br><br></span>
+
+
+
+<b>b) Déterminer le coût marginal.</b><br><br>
+
+
+Kou majinal la se derive fonksyon Kou total la: Cm = CT'
+
+<br><br>
+Derive 3q^2 bay 6q, epi derive 450q bay 450.
+
+<br><br>
+<span style="color:green;"><b>Cm = 6q + 450</b><br><br></span>
+<br>
+
+
+<b>c) Calculer la quantité qui maximise le profit du monopoleur.</b><br><br>
+
+
+Pwofi a maksimòm lè Revenu Marginal (Rm) egal ak Coût Marginal (Cm). Fòk nou jwenn Rm (derive RT) :
+
+<br><br>
+Rm = RT' = -3q + 1350
+<br><br>
+
+Kounye a nou poze Rm = Cm :
+
+<br><br>
+-3q + 1350 = 6q + 450
+<br><br>
+
+1350 - 450 = 6q + 3q
+
+<br><br>
+900 = 9q ,     q = 900 / 9
+
+<br><br>
+<span style="color:green;"><b>q = 100 inite</b><br><br></span>
+
+<br><br>
+
+<b>d) En déduire le prix de vente du produit.</b><br><br>
+
+
+Nou ranplase q ak 100 nan fòmil Pri a :
+
+<br><br>
+P = -1.5(100) + 1350
+<br><br>
+
+P = -150 + 1350
+<br><br>
+
+<span style="color:green;"><b>P = 1200</b><br><br></span>
+<br><br>
+
+
+<b>e) Évaluer le profit réalisé par cette entreprise.</b><br><br>
+<br><br>
+
+Pwofi (\pi) se Revenu Total mwens Coût Total: \pi = RT - CT. Nou pral kalkile yo ak kantite 100 lan.
+
+<br><br>
+RT = -1.5(100)² + 1350(100) = -15000 + 135000 = 120000
+
+
+CT = 3(100)² + 450(100) + 500 = 30000 + 45000 + 500 = 75500
+<br><br>
+
+\pi = 120000 - 75500
+
+<br><br>
+<span style="color:green;"><b>\pi = 44500</b><br><br></span>
+
+<br>
+
+<hr>
+
+<b>V- Dans une économie réduite aux ménages et aux entreprises...</b><br><br>
+
+
+<i>Done :</i> C = 85 + 0.75Yd ak I = 1000
+
+
+
+<b>a) Préciser que représentent : « 85 » et « 0,75 Yd ».</b><br><br>
+
+<br>
+ * <b>85 :</b><br><br> <span style="color:green;"><b>Konsomasyon otonòm (oswa enkonpresib)</b><br><br></span>. Se kantite moun yo ap konsome menm lè revni yo (Yd) se zewo.
+ * <b>0.75 :</b><br><br> <span style="color:green;"><b>Propansyon majinal pou konsome (pmc)</b><br><br></span>. Sa vle di pou chak 1 goud revni ki ogmante, moun yo ap depanse 0.75 goud nan konsomasyon.
+   
+   
+   <br><br>
+<b>b) Calculer la propension marginale à épargner.</b><br><br>
+
+
+Propansyon majinal pou eparye (pms) se rès revni an ki pa konsome : pms = 1 - pmc
+
+<br><br>
+pms = 1 - 0.75
+
+<br>
+<span style="color:green;"><b>pms = 0.25</b><br><br></span>
+
+
+<br>
+<b>c) Donner la fonction d'épargne de cette économie.</b><br><br>
+<br>
+
+Fonksyon epay la (S) se : S = -Co + pms \times Yd (kote Co se konsomasyon otonòm).
+<br>
+
+<span style="color:green;"><b>S = -85 + 0.25Yd</b><br><br></span>
+
+<br><br>
+
+<b>d) Déterminer le revenu d'équilibre.</b><br><br>
+
+
+Ekilib la fèt lè Revni (Y) egal ak Demann Global (C + I). Konsidere Yd = Y paske pa gen taks.
+
+<br><br>
+Y = C + I
+
+<br><br>
+Y = (85 + 0.75Y) + 1000
+
+<br><br>
+Y - 0.75Y = 1085
+<br><br>
+
+0.25Y = 1085
+
+<br><br>
+Y = 1085/ 0.25
+
+
+<span style="color:green;"><b>Y = 4340</b><br><br></span>
+
+
+
+<b>e) Trouver le taux d'épargne correspondant au revenu d'équilibre.</b><br><br>
+
+
+Toudabò, ann kalkile kantite epay la (S) :
+<br><br>
+
+S = -85 + 0.25(4340) = -85 + 1085 = 1000. (Nòt: Nan ekilib la, Epary toujou egal ak Envestisman, donk S = I = 1000).
+
+<br><br>
+Kounye a, To Epay la (Taux d'épargne) se Epay la divize pa Revni an (S / Y) :
+
+<br><br>
+Taux = 1000 / 4340 \approx 0.2304
+
+<br>
+<span style="color:green;"><b>To epay la se anviwon 23.04%</b><br><br></span>
+
+<br><br><br>
+<hr>
+
+<h2 style="color: #2c3e50;">PARTIE C : Traiter l'une des analyses suivantes (20Pts)</h2>
+<i>Nòt pou pwofesè a / Aplikasyon an:</i> Elèv la dwe chwazi youn nan sijè yo epi devlope l:
+<br><br>
+
+ * <b>Analyse 1 (Taux d'intérêt) :</b><br><br> Lè to enterè yo monte, moun yo plis ankouraje sere lajan yo (épargne) nan bank pou yo ka jwenn plis pwofi, donk konsomasyon an ka desann. Pou antrepriz yo, yon gwo to enterè vle di prete lajan ap koute pi chè; sa pral frene envestisman yo paske y ap prefere ranvwaye pwojè yo.<br>
+ * <b>Analyse 2 (Rôle de l'entreprise) :</b><br><br> Antrepriz la se motè ekonomi an. Li kreye travay, li pwodui byen ak sèvis moun yo bezwen, epi li peye taks l Leta. Lè yon antrepriz ap pwodui anpil, sa fè PIB peyi a ogmante (croissance économique). Anplis, inovasyon yo pote nan teknoloji ak kondisyon lavi travayè yo ede nan devlopman dirab peyi a.
+</div>
+
+  </div>
+</div>
+
+<div id="art" class="hidden">
+  <div class="examCard">
+    <h3>Egzamen Art/Music</h3>
+    <img src="/data/AArtmodèl1.jpg" class="examImg" onclick="zoom(this)">
+​<div class="correction"><b>Koreksyon : ART ET MUSIQUE (Modèl 1)</b><br><br>
+​<h2 style="color: #2c3e50;">Série A : Dissertation (20 pts)</h2>
+<i>Chwa sijè : Elèv la dwe trete youn nan de sijè sa yo. Men ide prensipal yo:</i>
+
+<br><br>
+
+<b>1) Un tableau réaliste est-il un miroir exact de la réalité ?</b><br><br>
+<br><br>
+
+<i>Esplikasyon :</i> Menmsi yon pent ap chèche reprezante sa li wè (reyalis), tablo a ap toujou pase pa entèpretasyon pèsonèl li (chwa limyè, ang, ak santiman). Tablo a se pa yon kopi mekanik, se yon <span style="color:green;"><b>reprezantasyon subjektiv</b><br><br></span> de reyalite a.
+
+<br><br>
+
+<b>2) La science est-elle un avantage ou un désavantage pour l'épanouissement de l'art ?</b><br><br>
+
+<br><br>
+<i>Esplikasyon :</i> Syans lan se yon <span style="color:green;"><b>avantaj</b><br><br></span> paske li bay nouvo zouti (koulè sentetik, lojisyèl dijital, analiz chimik pou restorasyon). Men, li ka yon <span style="color:green;"><b>dezavantaj</b><br><br></span> si teknik la vin pi enpòtan pase emosyon oswa kreyativite atis la.
+​<hr><br><br>
+<h2 style="color: #2c3e50;">Étude d'œuvre sculptée : Nèg Mawon</h2>
+<b>Fiche technique :</b><br><br>
+​<b>Titre :</b><br><br> Nèg Mawon
+​<b>Auteur :</b><br><br> Albert Mangonès
+​<b>Nature :</b><br><br> Sculpture (Bronze)
+​<b>Lieu d'exposition :</b><br><br> Champ de Mars, Port-au-Prince.
+​
+<br><br>
+<b>Étape 1 : Expliquez ce qui est mis sous vos yeux.</b><br><br>
+<br><br>
+
+<i>Repons :</i> Se yon estati yon gason ki ajenou, li gen yon <span style="color:green;"><b>lanbi nan bouch li</b><br><br></span> pou li rasanble pèp la, yon <span style="color:green;"><b>manchèt nan men l</b><br><br></span>, epi pye l gen <span style="color:green;"><b>chenn kase</b><br><br></span>.
+
+<br><br><br><br>
+
+<b>Étape 2 : Le rapport avec le spectateur.</b><br><br>
+<br>
+
+<i>Esplikasyon :</i> Estati sa a pale ak tout Ayisyen. Li fè moun ki ap gade l la santi <span style="color:green;"><b>fyète, libète, ak rezistans</b><br><br></span>. Li raple nou kote nou soti.
+
+<br><br><br>
+
+<b>Étape 3 : Interprétation (Le message).</b><br><br>
+
+<br>
+<i>Repons :</i> Mesaj la se <span style="color:green;"><b>revi lwa ak kase chenn lesklavaj</b><br><br></span>. Lanbi a senbolize kominikasyon ak apèl pou konba pou diyite moun.
+​<hr><br><br><br>
+<h2 style="color: #2c3e50;">Série B : Culture Générale (15 pts)</h2>
+​<b>1) Qu’est ce qui fait la valeur d’un tableau : L’artiste / la qualité du travail ou l’époque ?</b><br><br>
+<br>
+
+<i>Repons :</i> Valè yon tablo depann de <span style="color:green;"><b>twa eleman sa yo ansanm</b><br><br></span>, men <span style="color:green;"><b>notoryete atis la ak rarite travay la</b><br><br></span> nan yon epòk bay souvan detèmine pri a sou mache a.
+
+<br><br><br>
+
+<b>2) L'incendie de la Cathédrale Notre Dame de Paris... Comment pouvez-vous expliquer cela ?</b><br><br>
+<br>
+
+<i>Esplikasyon :</i> Mond lan te choke paske katedral sa a se yon <span style="color:green;"><b>patrimwan mondyal</b><br><br></span>. Li reprezante plizyè syèk listwa, achitekti gotik, ak kilti ki depase limit peyi Lafrans.
+
+<br><br>
+
+<b>3) Parlez en peu de lignes d'Albert Mangonès et Georges Baussan.</b><br><br>
+<br><br>
+
+<i>Repons :</i> Se de gwo achitèk ayisyen. <span style="color:green;"><b>Albert Mangonès</b><br><br></span> pi popilè pou Nèg Mawon ak moniman istorik. <span style="color:green;"><b>Georges Baussan</b><br><br></span> se li ki te desine Palè Nasyonal (sa ki te kraze nan tranbleman tè a).
+
+<br><br>
+
+<b>4) Quel est ce style architectural (Léon Mathon)? Faites-en une description.</b><br><br>
+
+
+<i>Repons :</i> Léon Mathon te enspire pa style <span style="color:green;"><b>Néoclassique ak Gingerbread</b><br><br></span>. Deskripsyon: Li karakterize pa gwo galri, dekorasyon an bwa (dentelle), ak gwo fenèt pou kite lè pase (adaptasyon nan klima cho).<br><br><br>
+​<hr>
+<h2 style="color: #2c3e50;">Série C : Patrimoine et Art (15 pts)</h2>
+​<b>1) Quel est le rôle principal de l’ISPAN ?</b><br><br>
+
+
+<i>Repons :</i> Ròl ISPAN se <span style="color:green;"><b>inventorier, protéger et restaurer le patrimoine national</b><br><br></span> (moniman istorik tankou Sitadèl la oswa Palè Sans-Souci).
+<br><br><br>
+
+
+<b>2) Proposez un modèle de village idéal pour le pays tout entier.</b><br><br>
+
+<br>
+<i>Esplikasyon :</i> Yon vilaj ideyal ta dwe <span style="color:green;"><b>parasismique et paracyclonique</b><br><br></span> (ki reziste tranbleman tè ak siklon), ki sèvi ak enèji solè, epi ki respekte tradisyon lakou ayisyen an kote gen espas vèt ak kominotè.
+<br><br>
+
+
+<b>3) Liaison des mots aux domaines :</b><br><br>
+
+
+​<table border="1" style="border-collapse: collapse; width: 80%; text-align: center;">
+<tr style="background-color: #f2f2f2;">
+<th>Domaine</th>
+<th>Mots liés</th>
+</tr>
+<tr>
+<td><b>Architecture</b><br><br></td>
+<td style="color:green;"><b>Bossage, Entablement</b><br><br></td>
+</tr>
+<tr>
+<td><b>Sculpture</b><br><br></td>
+<td style="color:green;"><b>Gisant, Sphinx</b><br><br></td>
+</tr>
+</table>
+​<hr>
+<h2 style="color: #2c3e50;">Série D : Arts plastiques (25 pts)</h2>
+​<b>I- Reliez les couleurs complémentaires :</b><br><br>
+
+
+<i>Esplikasyon :</i> Koulè konplemantè yo se koulè ki opoze nan sèk kwomatik la.
+<br><br><br>
+
+​<b>Jaune</b><br><br>    <span style="color:green;"><b>Violet</b><br><br></span>
+​<b>Rouge</b><br><br>    <span style="color:green;"><b>Vert</b><br><br></span>
+​<b>Bleu</b><br><br>    <span style="color:green;"><b>Orange</b><br><br></span>
+​</div>
+  </div>
+   
+    <div class="examCard">
+    <h3>Egzamen Art/Music</h3>
+    <img src="/data/AArtmodèl2.jpg" class="examImg" onclick="zoom(this)">
+​<div class="correction"><b>Koreksyon : ART ET MUSIQUE (Modèl 2)</b><br><br>
+​<h2 style="color: #2c3e50;">Partie A : Musique (50 pts)</h2><br>
+​1) Renversements des accords (10 pts)
+​Esplikasyon : Yon "renversement" se lè nou chanje lòd nòt yo nan yon akò pou se pa nòt fondamantal la ki anba nèt.
+​a) Do Majè (Do-Mi-Sol) :<br><br>
+​1er renversement (6) : Mi - Sol - Do
+​2ème renversement (6/4) : Sol - Do - Mi<br><br>
+​b) Fa Majè (Fa-La-Do) :<br>
+​1er renversement (6) : La - Do - Fa
+​2ème renversement (6/4) : Do - Fa - La
+​c) Sol Majè (Sol-Si-Re) :<br>​    6te Maj (depi sou Re)    Ajoute Si<br>
+
+​1er renversement (6) : Si - Re - Sol
+​2ème renversement (6/4) : Re - Sol - Si<br>​    
+
+​d) Si bémol Majè (Sib-Re-Fa) :<br>
+​1er renversement (6) : Re - Fa - Sib
+​2ème renversement (6/4) : Fa - Sib - Re<br><br>​    
+
+​2) Ajoute nòt ki manke a (16 pts)
+​Men nòt pou elèv la ajoute sou pòte a pou fòme entèval yo mande a :
+​5te juste (depi sou Sol)    Ajoute Re<br>​    
+
+​2de Maj (depi sou Do)    Ajoute Re<br>​    
+
+​4te juste (depi sou Fa)    Ajoute Sib<br>​    
+
+​3ce min (depi sou Mi)    Ajoute Sol<br>​    
+
+​2de min (depi sou La)    Ajoute Sib<br><br>
+​7eme Maj (depi sou Si)    Ajoute La#
+​8ve (depi sou Do)    Ajoute Do (anwo)<br><br>
+​3) Chiffrer la mesure (8 pts)
+​Esplikasyon : Chiffrer yon mezi vle di di konbe tan ki gen ladan l.<br><br>
+​a) Nwa pwent + kwoch + 4 doub kwoch = 3/4 (3 tan).<br><br>
+​b) Nwa + 2 soupir kwoch + 4 doub kwoch = 3/4 (3 tan).<br><br>
+​c) 4 doub kwoch + kwoch/soupir kwoch + soupir nwa + nwa = 4/4 (4 tan).
+​d) 2 nwa = 2/4 (2 tan).<br><br>
+​4) Chwa Repons (8 pts)<br><br>
+​a) A cappella : Interprétation d'une musique vocale sans accompagnement instrumental.<br><br>
+​b) Baryton : Voix masculine située entre le ténor et la basse.<br><br>
+​c) Concerto : Composition musicale généralement écrite pour un <br<br>>instrument soliste accompagné par l'orchestre.
+​d) Pulsation : Battement régulier donnant la vitesse d'exécution d'un morceau.<br><br>
+​5) Remplissez les espaces vides (8 pts)<br><br>
+​a) L'orchestre de chambre s'applique à des ensembles rassemblant un nombre limité de musiciens.<br><br>
+​b) L'orchestre d'harmonie d'origine militaire... composé des instruments à vent (en bois et en cuivre) et des percussions.<br><br>
+​c) Le quatuor à cordes se compose d'un premier violon, d'un second violon, d'un alto et d'un violoncelle.<br><br>
+​d) La fanfare est composé uniquement d'instruments à vent en cuivre et de percussions.<br><br>
+​<hr>
+<h2 style="color: #2c3e50;">Partie B : Histoire de l'Art (50 pts)</h2>
+​Série A : Dissertation (25 pts)<br><br>
+​Sujet 1 : La conception du beau de Platon<br><br>
+Ide Prensipal : Pou Platon, bèl bagay nou wè ak je nou yo se sèlman "lonbraj" oswa kopi yon bèlte ki pi wo ki nan mond ide yo (Le monde des Idées). Platon panse bèlte a lye ak lavere ak labonte. Yon objè bèl si li reflete lòd ak amoni ki nan lespri a.
+​Sujet 2 : Le vaudou dans la culture haïtienne
+Ide Prensipal : Vaudou a se pa sèlman yon relijyon, li se nanm kilti ayisyen an.<br><br>
+​Dans ak Mizik : Pifò ritm nou yo (Yanvalou, Ibo) soti nan vaudou.
+​Art Plastique : Penti "naïf" ayisyen an ak travay fè dekoupe sèvi ak anpil senbòl (vèvè) vaudou.<br><br>
+​Idantite : Li se yon eritaj rezistans zansèt yo te kite pou nou depi nan tan lesklavaj.
+​</div>
+  </div>
+</div>
+
+<div id="istwa" class="hidden">
+  <div class="examCard">
+    <h3>Syans Sosyal</h3>
+    <img src="/data/AAaistwamo1.jpeg" class="examImg" onclick="zoom(this)">
+<h2 style="color: #2c3e50;"><br>A- Première Partie (40%)</h2>
+<i>Chwa Repons ki kòrèk yo :</i>
+
+<br><br><br>
+
+​L'un des instruments juridiques qui a légalisé l'occupation américaine d'Haïti est :<br>
+​Repons : c- La convention de 1915.<br>
+​Esplikasyon : Se dokiman sa a ki te bay Ameriken yo dwa legal pou yo kontwole dwàn ak finans peyi a pandan okipasyon an.<br><br><br>
+​Le chef d'État qui a dirigé le pays de 1941 à 1946 fut :<br><br>
+​Repons : b- Élie Lescot.<br>
+​Esplikasyon : Lescot te pran pouvwa a apre Sténio Vincent, epi se kriz 1946 la ki te fòse l kite pouvwa a.<br><br><br>
+​Précisez l'événement considéré comme la cause immédiate de la Grande Guerre :<br>
+​Repons : a- L'assassinat de François Ferdinand à Sarajevo.<br>
+​Esplikasyon : Premye Gè Mondyal la te pete apre yo te fin touye eritye twòn peyi Otrich la nan lane 1914.<br><br>
+​Comment appelle-t-on les bidonvilles apparus lors de la Grande dépression aux Etats-Unis ?
+​Repons : c- Hoovervilles.<br>
+​Esplikasyon : Yo te ba yo non sa a pou yo te pase Prezidan Herbert Hoover nan betiz paske pèp la te panse se fòt li ki te fè gen kriz ekonomik sa a.<br><br>
+​Comment s'appelait le programme nazi visant à promouvoir « la pureté raciale » ?<br>
+​Repons : b- Aryanisation.<br><br>
+​Combien de pays ont rejoint l'Union européenne en 2007 ?<br>
+​Repons : a- 2 (La Bulgarie et la Roumanie).<br><br>
+​Quelle caractéristique est essentielle pour qu'un pays soit considéré comme étant une grande puissance ?<br>
+​Repons : d- Une capacité militaire significative.<br>
+​Esplikasyon : Yon gwo pwisans dwe gen yon lame ki fò ak yon ekonomi ki solid anpil pou li ka domine lòt nasyon.<br><br>
+​Quelle est la caractéristique principale de la mondialisation ?<br>
+​Repons : b- L'intégration économique mondiale.<br><br><br>
+​
+
+<hr>
+<h2 style="color: #2c3e50;">B- Deuxième Partie : Histoire Nationale (40%)</h2><br><br><br>
+​1) Présentez le document (10 pts)<br><br><br>
+​Repons : Se yon ekstre nan liv Haïti, la République Dominicaine et Cuba, Etat, économie et société (1492-2009), ki te ekri pa Sauveur Pierre Étienne epi pibliye nan edisyon L'Harmattan.<br><br><br><br>
+​2) Analysez les principales manifestations de la mulâtrocratie (15 pts)<br><br>
+​Repons : Tèks la montre "mulâtrocratie" a te manifeste konsa:<br><br>
+​Kontwòl ekskizif sou sant desizyon yo nan aparèy Leta a.<br><br>
+​Yon dominasyon total sou administrasyon piblik la.<br><br>
+​Eksklizyon entelektyèl ak pwofesyonèl nwa yo nan kous pouvwa a.<br><br><br><br>
+​3) Le rôle de la crise de 1946 dans la chute de Lescot et l'accession de Dumarsais Estimé (15 pts)<br><br>
+​Esplikasyon : Kriz 1946 la te pete paske pèp la ak entelektyèl nwa yo pa t kapab sipòte diskriminasyon gouvènman Lescot a ankò. Grèv ak manifestasyon yo te fòse Lescot pati, sa ki te louvri chemen pou Dumarsais Estimé moute sou pouvwa a kòm reprezantan kouran "noiriste" la pou te ka gen plis jistis sosyal.
+​<br><br><br><br>
+
+<hr>
+<h2 style="color: #2c3e50;">C- Troisième Partie : Histoire Universelle et Géo (20%)</h2><br><br><br>
+​1) Dressez le bilan socio-économique et politique de la première guerre mondiale (Doc 1)<br><br>
+​Repons :
+​Sosyopolitik : Près 10 milyon moun mouri an Ewòp ak yon gwo mank nesans nan popilasyon an.<br><br>
+​Ekonomik : Destriksyon kolosal nan agrikilti ak endistri; Leta ewopeyen yo te rine ak dèt yo te dwe Etazini.
+​Pwisans : Etazini vin tounen premye pwisans mondyal la.<br><br><br>
+​2) Définition de « Grande Puissance » et expressions de la puissance des Etats-Unis (Doc 2)<br><br>
+​Repons :
+​Definisyon : Yon "Grande Puissance" se yon peyi ki gen yon gwo PNB (Pwodwi Nasyonal Brit), yon gwo pwodiksyon endistriyèl ak agrikòl, ak yon kapasite pou l enfliyanse mache mondyal la.​<br>
+<br><br>
+​Etazini : Pwisans yo parèt klè nan kapasite yo pou yo prete lòt nasyon lajan (yo te vin kreyansye mondyal) ak dominasyon yo sou nivo lavi ak konsomasyon apre lagè a. <br>
+​</div>
+  </div>
+</div>
+<!-- ================= ZOOM ================= -->
+<div id="zoomModal" class="zoomModal">
+  <div class="zoomContent">
+    <span class="closeBtn" onclick="closeZoom()">✕</span>
+    <span class="navBtn prevBtn" onclick="prevImg()">❮</span>
+    <span class="navBtn nextBtn" onclick="nextImg()">❯</span>
+    <img id="zoomImg">
+  </div>
+</div>
+
+<script>
+/* ================= SHOW ================= */
+function show(id){
+  document.querySelectorAll("[id]").forEach(el=>{
+    if(el.id !== "zoomModal" && el.id !== "zoomImg"){
+      el.classList.add("hidden");
+    }
+  });
+  const target = document.getElementById(id);
+  if(target){ setTimeout(()=>{ target.classList.remove("hidden"); },30); }
+}
+
+/* ================= ZOOM & SWIPE & PAN ================= */
+let images=[], index=0, scale=1, posX=0, posY=0, startX=0, startY=0, isPanning=false;
+
+function zoom(el){
+  const modal=document.getElementById("zoomModal");
+  const img=document.getElementById("zoomImg");
+  const src=el.src;
+  
+  images = Array.from(document.querySelectorAll(".examImg")).map(i=>i.src);
+  index = images.indexOf(src);
+  
+  img.src = src;
+  img.style.transform = "scale(1) translate(0px,0px)";
+  scale=1; posX=0; posY=0;
+  
+  modal.style.display="flex";
+}
+
+/* NEXT / PREV */
+function nextImg(){ if(index<images.length-1){ index++; updateZoomImg(); } }
+function prevImg(){ if(index>0){ index--; updateZoomImg(); } }
+function updateZoomImg(){
+  const img=document.getElementById("zoomImg");
+  img.src = images[index];
+  img.style.transform="scale(1) translate(0px,0px)";
+  scale=1; posX=0; posY=0;
+}
+
+/* CLOSE */
+function closeZoom(){ document.getElementById("zoomModal").style.display="none"; }
+
+/* DOUBLE TAP */
+let lastTap=0;
+const zoomImg=document.getElementById("zoomImg");
+zoomImg.addEventListener("click", function(e){
+  const now=new Date().getTime();
+  if(now-lastTap<300){
+    scale=scale===1?2:1;
+    posX=0; posY=0;
+    this.style.transform=`scale(${scale}) translate(${posX}px,${posY}px)`;
+  }
+  lastTap=now;
+});
+
+/* TOUCH / SWIPE / PAN */
+zoomImg.addEventListener("touchstart", e=>{
+  if(scale>1){
+    isPanning=true;
+    startX=e.touches[0].clientX-posX;
+    startY=e.touches[0].clientY-posY;
+  } else {
+    startX=e.touches[0].clientX;
+  }
+});
+zoomImg.addEventListener("touchmove", e=>{
+  e.preventDefault();
+  if(scale>1 && isPanning){
+    posX=e.touches[0].clientX-startX;
+    posY=e.touches[0].clientY-startY;
+    zoomImg.style.transform=`scale(${scale}) translate(${posX}px,${posY}px)`;
+  }
+});
+zoomImg.addEventListener("touchend", e=>{
+  isPanning=false;
+  // SWIPE si pa zoom
+  if(scale===1){
+    let endX=e.changedTouches[0].clientX;
+    if(endX-startX>60) prevImg();
+    if(startX-endX>60) nextImg();
+  }
+});
+</script>
+<script src="xxxlxx.js"></script>
+
+</body>
+</html>

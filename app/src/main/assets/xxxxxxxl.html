@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fòmil NS4</title>
+<style>
+body{font-family:Arial;background:navajowhite;padding:20px;}
+h2{text-align:center;color:#1e88e5;}
+.subjects{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.subject{background:white;padding:15px;border-radius:10px;cursor:pointer;text-align:center;}
+.formulaCard{background:white;padding:15px;border-radius:10px;margin:10px 0;}
+.hidden{display:none;}
+.downloadBtn{margin-top:15px;background:#1e88e5;color:white;padding:8px 12px;border:none;border-radius:6px;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<h2>📐 Fòmil NS4</h2>
+
+<div id="subjects" class="subjects">
+<div class="subject" onclick="openSubject('math')">Analiz</div>
+<div class="subject" onclick="openSubject('stat')">Statistik</div>
+    <div class="subject" onclick="openSubject('konplèks')"> i Konplèks</div>
+    
+    <div class="subject" onclick="openSubject('pwobab')">⚡ Pwobab</div>
+    
+   <div class="subject" onclick="openSubject('suit')"> Suit</div>
+   
+<div class="subject" onclick="openSubject('chimi')">
+🧪 Chimi
+</div>
+
+
+    <div class="subject" onclick="openSubject('kon')">⚡ Kondansatè</div>
+    
+<div class="subject" onclick="openSubject('altènatif')">⚡ Altènatif</div>
+
+    <div class="subject" onclick="openSubject('sinematik')">⚡Sinematik</div>
+    
+    <div class="subject" onclick="openSubject('manyetik')">🧲ElektwoManyetik</div>
+    
+        <div class="subject" onclick="openSubject('ekonomi')">💰 Ekonomi</div>
+        <button class="downloadBtn" onclick="downloadAllFormulas()">
+⬇ Telechaje tout pou offline
+</button>
+</div>
+
+<div id="math" class="hidden"></div>
+<div id="stat" class="hidden"></div>
+<div id="konplèks" class="hidden"></div>
+<div id="pwobab" class="hidden"></div>
+<div id="suit" class="hidden"></div>
+<div id="chimi" class="hidden"></div>
+<div id="kon" class="hidden"></div>
+<div id="altènatif" class="hidden"></div>
+<div id="sinematik" class="hidden"></div>
+<div id="manyetik" class="hidden"></div>
+<div id="ekonomi" class="hidden"></div>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="xxxxxxxl.js"></script>
+<script src="fòmil.js"></script>
+
+</body>
+</html>

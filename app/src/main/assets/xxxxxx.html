@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS4 - Enskripsyon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>NS4 Support +</h1>
+<p>Kreye kont ou</p>
+
+<input type="text" id="name" placeholder="Non">
+
+<input type="text" id="pseudo" placeholder="Pseudo">
+<input type="password" id="password" placeholder="Modpas">
+
+<select id="serie">
+<option value="">Chwazi Seri</option>
+<option>SMP</option>
+<option>LLA</option>
+<option>SVT</option>
+<option>SES</option>
+</select>
+
+<h1>Sponsor 50 HTG</h1>
+
+<!-- Logo MonCash -->
+<div class="moncash-logo-container" style="text-align:center; margin-bottom:10px;">
+  <img src="data/Screenshot_20260315-220914.png" 
+       alt="MonCash Logo" 
+       style="width:150px; max-width:20%; display:block; margin:0 auto;">
+       <br><h4><b id="moncashNumber"></b></h4>
+</div>
+
+<input type="email" id="contact" placeholder="Email">
+
+<input type="text" id="phone" placeholder="Phone MonCash">
+
+<input type="text" id="transaction_id" placeholder="ID Transaction">
+<button id="signupBtn">Enskri</button>
+<p id="status"></p>
+
+<p>Ou deja gen kont ?</p>
+<button onclick="goLogin()">Konekte</button>
+</div>
+
+<script>
+function goLogin(){ location="login.html"; }
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-database-compat.js"></script>
+<script src="xxxxxx.js"></script>
+</body>
+</html>
