@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         // 🔹 Ouvri URL ekstèn
         webView.setWebViewClient(new WebViewClient());
 
-        // 🔹 Chaje fichye lokal la (intro.html nan assets folder)
-        webView.loadUrl("file:///android_asset/intro.html");
+        // 🔹 Chaje fichye lokal la (.html nan assets folder)
+        webView.loadUrl("file:///android_asset/xxxxx.html");
     }
 
     // 🔙 Back button pou navigasyon WebView
