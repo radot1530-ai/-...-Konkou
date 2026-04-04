@@ -23,13 +23,12 @@ jobs:
           gradle-version: 8.5
 
       # 🔐 FIX PATH
-  - name: Build Release APK
-  run: |
-    gradle assembleRelease \
-      -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/my-release-key.jks \
-      -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
-      -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
-      -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }} \
+      - name: Build Release APK
+        run: |
+          gradle assembleRelease \
+            -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/my-release-key.jks \
+            -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
+            -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
             -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
       - name: Upload APK
