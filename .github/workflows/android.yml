@@ -24,7 +24,7 @@ jobs:
 
       # 🔐 FIX PATH
       - name: Decode Keystore
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/my-release-key.jks
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > my-release-key.jks
 
       - name: Build Release APK
         run: |
