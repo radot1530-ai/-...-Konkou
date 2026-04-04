@@ -27,6 +27,10 @@ jobs:
       - name: Decode Keystore
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > my-release-key.jks
 
+      # ✅ BAY PERMISSION (FIX ERÈ OU TE GEN AN)
+      - name: Give permission to gradlew
+        run: chmod +x gradlew
+
       # 🔨 Build RELEASE APK (SIGNED)
       - name: Build Release APK
         run: ./gradlew assembleRelease \
