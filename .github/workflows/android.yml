@@ -22,10 +22,14 @@ jobs:
         with:
           gradle-version: 8.5
 
-      # 🔐 FIX PATH
+      - name: Decode Keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > $GITHUB_WORKSPACE/my-release-key.jks
+          chmod 644 $GITHUB_WORKSPACE/my-release-key.jks
+
       - name: Build Release APK
         run: |
-          gradle assembleRelease \
+          ./gradlew assembleRelease \
             -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/my-release-key.jks \
             -Pandroid.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }} \
             -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
